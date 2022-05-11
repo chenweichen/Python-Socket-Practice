@@ -49,8 +49,18 @@ git bracnh -m websocket office-websocket
 git push -u main-websocket office-websocket
 
 
-/* Similar 遠端叫 main-websocket , 將本地端 cat 分支推上去 */
-#git push main-websocket cat 
+#Enumerating objects: 5, done.
+#Counting objects: 100% (5/5), done.
+#Delta compression using up to 12 threads
+#Compressing objects: 100% (4/4), done.
+#Writing objects: 100% (5/5), 1.02 KiB | 347.00 KiB/s, done.
+#Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+#To https://github.com/chenweichen/Python-Socket-Practice.git
+# * [new branch]      office-websocket -> office-websocket
+#Branch 'office-websocket' set up to track remote branch 'office-websocket' from 'main-websocket'.
+
+
+
 
 git branch
 /* 在local 端新增一個分支-cat */
@@ -60,12 +70,23 @@ git branch cat
 git checkout cat
 git status
 git add git-commands.txt
-git commit -m "Commit for records of git commands"
+git commit -m "Commit for records of git c"ommands"
 
 /* 會把 branch cat 推到 main-websocket 這個節點表的位置, 並在上面建立一個同名 branch cat(或更新進度) */
 git push main-websocket cat
 
-
+#Enumerating objects: 4, done.
+#Counting objects: 100% (4/4), done.
+#Delta compression using up to 12 threads
+#Compressing objects: 100% (3/3), done.
+#Writing objects: 100% (3/3), 1.16 KiB | 596.00 KiB/s, done.
+#Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+#remote: 
+#remote: Create a pull request for 'cat' on GitHub by visiting:
+#remote:      https://github.com/chenweichen/Python-Socket-Practice/pull/new/cat
+#remote:
+#To https://github.com/chenweichen/Python-Socket-Practice.git
+# * [new branch]      cat -> cat
 
 
 
