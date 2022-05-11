@@ -89,5 +89,16 @@ git push main-websocket cat
 # * [new branch]      cat -> cat
 
 
+git branch
+git checkout office-websocket
+/* office-websocket 合併分支 cat */
+git merge cat
+
+git push main-websocket office-websocket
+
+git status
+git add git-commdands.txt
+git commit -m "After merging cat branch to office-websocket, I update some content to git-commands.txt"
+git push main-websocket office-websocket
 
 
