@@ -1,0 +1,72 @@
+HTTPS: https://github.com/chenweichen/Python-Socket-Practice.git
+
+…or create a new repository on the command line
+echo "# Python-Socket-Practice" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/chenweichen/Python-Socket-Practice.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/chenweichen/Python-Socket-Practice.git
+git branch -M main
+git push -u origin main
+
+
+pwd
+path:
+/d/vscPython/WebSocketProj
+
+/* 初始化*/
+git init 
+
+git status
+git add built-in-socket
+git status
+git commit -m "Initial commit"
+git status
+git branch
+/*要先至少有一個 commit 才能將原先 branch 改名*/
+/* git branch -m <old branch name> <new branch name> */
+git branch -m master websocket
+git branch
+
+/* 將遠端 respository 增加節點名字  */
+/* git remote 跟遠端有關操作 */
+/* add 加入一個遠端節點 */
+/* main-websocket 是後面這串 github 伺服器的位置 */
+git remote add main-websocket https://github.com/chenweichen/Python-Socket-Practice.git
+
+/* 公司端 repository prefix is "office-" plus repository name */ 
+git bracnh -m websocket office-websocket
+
+/* 將本地端 repository 推上 遠端(github) repository  */
+/* 把 office-websocket 這分支內容推向 main-websocket */
+/* 在 mian-websocket 那個遠端server(github)上 如果 office-websocket 不存在, 就建立一個叫做 office-websocket 的同名分支 */
+/* 將  */
+git push -u main-websocket office-websocket
+
+
+/* Similar 遠端叫 main-websocket , 將本地端 cat 分支推上去 */
+#git push main-websocket cat 
+
+git branch
+/* 在local 端新增一個分支-cat */
+git branch cat 
+
+/* switch to bracnh cat */
+git checkout cat
+git status
+git add git-commands.txt
+git commit -m "Commit for records of git commands"
+
+/* 會把 branch cat 推到 main-websocket 這個節點表的位置, 並在上面建立一個同名 branch cat(或更新進度) */
+git push main-websocket cat
+
+
+
+
+
+
