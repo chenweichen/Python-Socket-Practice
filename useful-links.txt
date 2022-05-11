@@ -1,0 +1,76 @@
+# Useful links for Python TCP Socket and WebSocket
+
+Python TCP Socket Server/Client 網路通訊教學
+https://shengyu7697.github.io/python-tcp-socket/
+
+
+Python Socket 網路通訊教學
+https://shengyu7697.github.io/python-socket/
+
+
+Full Stack Python - WebSockets
+https://www.fullstackpython.com/websockets.html
+
+
+WebSockets for Python 3
+https://websockets.readthedocs.io/en/3.0/intro.html
+
+
+Python之Websocket介紹與實作
+https://jimmy-huang.medium.com/python%E4%B9%8Bwebsocket%E4%BB%8B%E7%B4%B9%E8%88%87%E5%AF%A6%E4%BD%9C-8ec2474badaa
+
+
+Flask實作_websocket
+https://hackmd.io/@splasky/B1BvevzHE?type=view
+
+
+使用 Flask-SocketIO 完成 WebSocket 雙向通訊
+https://medium.com/@charming_rust_oyster_221/%E4%BD%BF%E7%94%A8-flask-socketio-%E5%AE%8C%E6%88%90-websocket-%E9%9B%99%E5%90%91%E9%80%9A%E8%A8%8A-49fd734f52ae
+
+
+Day 22 Flask-SocketIO
+https://ithelp.ithome.com.tw/articles/10269552
+
+
+[Python]WebSocket Client實作
+https://ithelp.ithome.com.tw/articles/10230592
+
+
+運用緩存優化後端性能 — Flask-cache之使用
+https://cute-ruby-cheetah-305.medium.com/%E9%81%8B%E7%94%A8%E7%B7%A9%E5%AD%98%E5%84%AA%E5%8C%96%E5%BE%8C%E7%AB%AF%E6%80%A7%E8%83%BD-flask-cache%E4%B9%8B%E4%BD%BF%E7%94%A8-5dac49b75bbc
+
+
+使用uWSGI、Nginx與Docker Compose部署Python Web Application(Flask, Django)—首部曲
+https://cute-ruby-cheetah-305.medium.com/%E4%BD%BF%E7%94%A8uwsgi-nginx%E8%88%87docker-compose%E9%83%A8%E7%BD%B2python-web-application-flask-django-%E4%B8%8A%E9%9B%86-b188310ed72e
+
+
+使用uWSGI、Nginx與Docker Compose部署Python Web Application(Flask, Django) — 番外篇
+https://cute-ruby-cheetah-305.medium.com/%E4%BD%BF%E7%94%A8uwsgi-nginx%E8%88%87docker-compose%E9%83%A8%E7%BD%B2python-web-application-flask-django-%E7%95%AA%E5%A4%96%E7%AF%87-aef096ad208b
+
+
+使用uWSGI、Nginx與Docker Compose部署Python Web Application(Flask, Django) — 最終章
+https://cute-ruby-cheetah-305.medium.com/%E4%BD%BF%E7%94%A8uwsgi-nginx%E8%88%87docker-compose%E9%83%A8%E7%BD%B2python-web-application-flask-django-%E6%9C%80%E7%B5%82%E7%AB%A0-28f03ce36269
+
+
+Airflow 取代Crontab與Celery完成定時PTT熱門文章爬蟲
+https://cute-ruby-cheetah-305.medium.com/airflow-%E5%8F%96%E4%BB%A3crontab%E8%88%87celery%E5%AE%8C%E6%88%90%E5%AE%9A%E6%99%82ptt%E7%86%B1%E9%96%80%E6%96%87%E7%AB%A0%E7%88%AC%E8%9F%B2-af5092f974c3
+
+
+PrecompileSignatures.jl
+This package reads all method signatures in a package and generates precompile directives for 
+any concrete signature that it can find.
+https://github.com/rikhuijzer/PrecompileSignatures.jl
+
+Like this package, SnoopCompile.jl can also generate precompile directives. 
+Where this package does it by reading code and signatures, 
+SnoopCompile runs code to find directives. 
+Because SnoopCompile runs the code, it can find much more directives. 
+However, the problem with running code is that it takes long. 
+For example, to generate a lot of precompile directives in Pluto.jl, 
+we could run all tests. This takes about 20 minutes. Conversely, 
+this package takes about 6 seconds to generate directives for all modules in Pluto. 
+In practise, this means that this package can re-generate the directives 
+with each start of the package whereas SnoopCompile's directives have to be cached, that is, stored in the repository.
+
+https://github.com/timholy/SnoopCompile.jl
+
