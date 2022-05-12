@@ -101,4 +101,10 @@ git add git-commdands.txt
 git commit -m "After merging cat branch to office-websocket, I update some content to git-commands.txt"
 git push main-websocket office-websocket
 
+/* Add Bayesian useful links */
+git status 
+git branch 
+git add bayesian-useful-links.txt 
+git commit -m "Add Bayesian useful links"
+git push main-websocket office-websocket
 

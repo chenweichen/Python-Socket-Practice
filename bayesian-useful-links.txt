@@ -1,0 +1,53 @@
+# Bayesian useful links 
+
+## No.:
+## Title:
+## https links: 
+
+1.
+Bayesian models of perception and action - Wei Ji Ma, Konrad Kording, and Daniel Goldreich, with original artwork by Brennan Klein
+https://www.cns.nyu.edu/malab/bayesianbook.html
+
+https://www.cns.nyu.edu/malab/static/files/Bayesian_models_of_perception_and_action_v3.pdf
+
+https://www.cns.nyu.edu/malab/static/files/Bayesian_models_of_perception_and_action_v2.pdf
+
+
+2.
+Mattias Villani - Bayesian Beyond Belief
+https://www.mattiasvillani.com
+
+https://github.com/mattiasvillani
+
+
+3.
+Home for the course Machine Learning, 
+7.5 credits given every spring semester at the Department of Statistics at Stockholm University.
+https://github.com/mattiasvillani/MLcourse
+
+Machine Learning - a first course for engineers and scientists (MLES) by Lindholm et al. (2021). 
+Forthcoming at Cambridge University Press. A free PDF version is available here. 
+
+http://smlbook.org/book/sml-book-draft-latest.pdf
+
+The previous title of the book was 'Supervised Machine Learning'.
+
+
+4.
+Bayesian Learning course at Stockholm University
+https://github.com/mattiasvillani/BayesLearnCourse
+
+The course gives a solid introduction to Bayesian statistical inference, 
+with special emphasis on models and methods in computational statistics and machine learning.
+
+
+5.
+Course material for the PhD course in Advanced Bayesian Learning
+https://github.com/mattiasvillani/AdvBayesLearnCourse
+
+
+6.
+Home for the book-in-progress 'Bayesian Learning'
+https://github.com/mattiasvillani/BayesianLearningBook
+
+
