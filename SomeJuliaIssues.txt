@@ -1,0 +1,64 @@
+# Julia Issues 
+
+## No.:
+## Title:
+## https links: 
+
+1.
+Why I no longer recommend Julia
+https://yuri.is/not-julia/
+
+Yuri Vishnevsky - crafting tools for the information age
+https://yuri.is
+
+Correctness and composability bugs in the Julia ecosystem (yuri.is)
+https://news.ycombinator.com/item?id=31396861
+
+StefanKarpinski
+https://news.ycombinator.com/item?id=31401490
+
+KenoFischer
+https://news.ycombinator.com/item?id=31398796
+
+ChrisRackauckas
+https://news.ycombinator.com/item?id=31397499
+
+ViralBShah
+https://news.ycombinator.com/item?id=31397253
+
+
+2.
+Why I no longer recommend Julia
+https://www.econjobrumors.com/topic/why-i-no-longer-recommend-julia
+
+https://www.econjobrumors.com/topic/why-i-no-longer-recommend-julia/page/2
+
+This is what happens when academics develop programming languages
+
+I prefer Yulias to Julias.
+
+
+3. 
+Explicitly Parameterized Neural Networks in Julia
+https://github.com/avik-pal/Lux.jl
+
+Lux is a julia deep learning framework which decouples models and parameterization using deeply nested named tuples.
+https://lux.csail.mit.edu/dev/
+
+4. 
+Julia bindings for the Enzyme automatic differentiator
+https://github.com/EnzymeAD/Enzyme.jl
+
+The Enzyme High-Performance Automatic Differentiator of LLVM
+https://enzyme.mit.edu
+
+
+5.
+JuliaLang: The Ingredients for a Composable Programming Language
+https://www.oxinabox.net/2020/02/09/whycompositionaljulia.html
+
+
+6.
+Announcing composable multi-threaded parallelism in Julia
+https://julialang.org/blog/2019/07/multithreading/
+
