@@ -62,3 +62,7 @@ https://www.oxinabox.net/2020/02/09/whycompositionaljulia.html
 Announcing composable multi-threaded parallelism in Julia
 https://julialang.org/blog/2019/07/multithreading/
 
+
+#
+git remote -v 
+git push main-websocket office-websocket 
