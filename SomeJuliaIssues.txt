@@ -27,6 +27,7 @@ ViralBShah
 https://news.ycombinator.com/item?id=31397253
 
 
+
 2.
 Why I no longer recommend Julia
 https://www.econjobrumors.com/topic/why-i-no-longer-recommend-julia
@@ -38,12 +39,15 @@ This is what happens when academics develop programming languages
 I prefer Yulias to Julias.
 
 
+
 3. 
 Explicitly Parameterized Neural Networks in Julia
 https://github.com/avik-pal/Lux.jl
 
 Lux is a julia deep learning framework which decouples models and parameterization using deeply nested named tuples.
 https://lux.csail.mit.edu/dev/
+
+
 
 4. 
 Julia bindings for the Enzyme automatic differentiator
@@ -53,14 +57,118 @@ The Enzyme High-Performance Automatic Differentiator of LLVM
 https://enzyme.mit.edu
 
 
+
 5.
 JuliaLang: The Ingredients for a Composable Programming Language
 https://www.oxinabox.net/2020/02/09/whycompositionaljulia.html
 
 
+
 6.
 Announcing composable multi-threaded parallelism in Julia
 https://julialang.org/blog/2019/07/multithreading/
+
+
+
+7.
+Using Julia
+https://www.carc.usc.edu/user-information/user-guides/software-and-programming/julia
+
+
+# Installing and using Julia
+cd $HOME
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.2-linux-x86_64.tar.gz
+tar -xf julia-1.7.2-linux-x86_64.tar.gz
+rm julia-1.7.2-linux-x86_64.tar.gz
+export PATH=$HOME/julia-1.7.2/bin:$PATH
+
+
+# Running Julia in interactive mode
+To run Julia interactively on a login node, enter juliaand this will start a new Julia REPL session.
+
+Note: Using Julia on a login node should be reserved for installing packages. 
+A common mistake for new users of HPC clusters is to run heavy workloads directly on a login node 
+(e.g., discovery.usc.eduor endeavour.usc.edu). 
+Unless you are only running a small test, please make sure to run your program as a job interactively on a compute node. 
+Processes left running on login nodes may be terminated without warning. 
+For more information on jobs, see our Running Jobs user guide.
+
+Using Julia interactively on a compute node is useful for more intensive work like exploring data, testing models, and debugg
+
+
+# Running Julia in batch mode
+To run Julia in batch mode, there are a few steps to follow:
+1. Create a Julia script
+2. Create a Slurm job script that runs the Julia script
+3. Submit the job script using Slurm's sbatchcommand
+
+
+# Installing Julia packages
+
+
+# Parallel programming with Julia
+Package	                Purpose
+Base.Threads	        For explicit multi-threading
+Distributed	            For explicit multi-processing
+MPI.jl	                For interfacing to MPI libraries
+DistributedArrays.jl	For working with distributed arrays
+Elemental.jl	        For distributed linear algebra
+ClusterManagers.jl	    For launching jobs via cluster job schedulers (e.g., Slurm)
+Dagger.jl	            For asynchronous evaluations and workflows
+CUDA.jl	                For interfacing to Nvidia CUDA GPUs
+
+
+
+8.
+This is the website for the JuliaHealth organization
+https://juliahealth.org
+
+https://github.com/JuliaHealth
+
+
+
+9. 
+JuliaRobotics
+https://github.com/JuliaRobotics
+
+https://juliarobotics.org
+
+https://github.com/JuliaRobotics/Caesar.jl
+
+https://juliarobotics.org/Caesar.jl/latest/faq/
+
+https://juliarobotics.org/Caesar.jl/latest/concepts/concepts/#Why/Where-does-non-Gaussian-data-come-from?-1
+
+
+
+10.
+probabilistic-programming
+https://github.com/topics/probabilistic-programming?l=julia
+
+WIP successor to Soss.jl
+https://github.com/cscherrer/Tilde.jl
+
+Probabilistic Modeling with Tilde.jl
+https://informativeprior.com/blog/2022/03-21-tilde/index.html
+
+
+
+11.
+JuliaLogging
+
+https://github.com/JuliaLogging
+
+https://julialogging.github.io
+
+https://docs.julialang.org/en/v1/stdlib/Logging/
+
+https://discourse.julialang.org/t/confused-about-logging/34945
+
+
+
+
+
+
 
 
 #
