@@ -1,0 +1,264 @@
+# Flask_python Issues 
+
+## No.:
+## Title:
+## https links: 
+
+0.
+Python Flask versus FastAPI: Which Should You Choose? - Apr 21, 2022 • 9 min read
+https://www.netguru.com/blog/python-flask-versus-fastapi
+
+
+1.
+Python Web — 快速建置網站的Flask套件
+https://seanyeh.medium.com/python-web-%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99%E7%9A%84flask%E5%A5%97%E4%BB%B6-59318830bd63
+
+
+2.
+Quickstart
+https://flask.palletsprojects.com/en/2.1.x/quickstart/
+
+
+独立 WSGI 容器
+https://dormousehole.readthedocs.io/en/latest/deploying/wsgi-standalone.html#gunicorn
+
+
+部署到生产环境
+https://flask-zh.readthedocs.io/tutorial/deploy/
+
+
+3.
+Python Web Flask — Flask-RESTful簡易CRUD API製作
+https://medium.com/seaniap/python-web-flask-flask-restful%E7%B0%A1%E6%98%93crud-api%E8%A3%BD%E4%BD%9C-1a4023c1b768
+
+
+4.
+Python Flask 入門指南 : 輕量級網頁框架教學
+https://devs.tw/post/448
+
+
+5.
+Python Web Flask — 使用靜態檔案
+https://medium.com/seaniap/python-web-flask-%E4%BD%BF%E7%94%A8%E9%9D%9C%E6%85%8B%E6%AA%94%E6%A1%88-ac00e863a470
+
+
+6.
+Python Web Flask — Blueprints 解決大架構的網站
+https://medium.com/seaniap/python-web-flask-blueprints-%E8%A7%A3%E6%B1%BA%E5%A4%A7%E6%9E%B6%E6%A7%8B%E7%9A%84%E7%B6%B2%E7%AB%99-1f9878312526
+
+
+7.
+Using async and await
+https://flask.palletsprojects.com/en/2.1.x/async-await/?highlight=concurrency
+
+Using async on Windows on Python 3.8
+Python 3.8 has a bug related to asyncio on Windows. 
+If you encounter something like ValueError: set_wakeup_fd only works in main thread, please upgrade to Python 3.9.
+
+
+8.
+PowerShell does not support automatic activation of conda virtual environment
+https://github.com/microsoft/vscode-python/issues/11638
+
+https://github.com/Microsoft/vscode-python/issues/2898
+
+
+9.
+How does a Flask app serve multiple users/requests at once?
+https://www.reddit.com/r/flask/comments/cesmvt/how_does_a_flask_app_serve_multiple_usersrequests/
+
+
+10.
+Handling Multiple Requests on Flask
+https://medium.com/@dkhd/handling-multiple-requests-on-flask-60208eacc154
+
+
+11.
+Does anyone have experience running Flask at scale? 
+https://news.ycombinator.com/item?id=12467227
+
+I used it once, for a small internal reporting service, 
+and was shocked to find that it was designed to process only a single request at a time, per process. 
+Is this a problem in the real world, or do decent caching rules and query design render it a non issue?
+
+
+I ran a small site that was written in Flask and received couple of millions requests a day without any problems.
+I used Nginx as a HTTP proxy and gunicorn for WSGI. It worked decently well, although it was pretty resources intensive (CPU, RAM).
+Today you can use something like Caddy[0] and Gunicorn[1]
+
+flasks builtin web server is for debug/development use. Run your flask apps under gunicorn, twisted web or any of the other supported servers in production.
+
+Nobody ever uses the built-in Flask server for production. The common deployment pattern is to load the Flask app into a WSGI or asyncio serve, which will then handle requests with scalable threading/process models.
+Look into uwsgi or gunicorn, and you'll never look back :)
+
+
+12.
+ Flask 學習路線圖教學
+https://github.com/hsuanchi/flask-template
+
+
+13.
+Async in Flask 2.0
+https://testdriven.io/blog/flask-async/
+
+Flask 2.0, which was released on May 11th, 2021, adds built-in support for asynchronous routes, 
+error handlers, before and after request functions, and teardown callbacks!
+
+When Should Async Be Used?
+While asynchronous execution tends to dominate discussions and generate headlines, it's not the best approach for every situation.
+
+It's ideal for I/O-bound operations, when both of these are true:
+There's a number of operations
+Each operation takes less than a few seconds to finish
+For example:
+making HTTP or API calls
+interacting with a database
+working with the file system
+
+It's not appropriate for background and long-running tasks as well as cpu-bound operations, like:
+Running machine learning models
+Processing images or PDFs
+Performing backups
+Such tasks would be better implemented using a task queue like Celery to manage separate long-running tasks.
+
+Asynchronous HTTP Client/Server for asyncio and Python
+https://docs.aiohttp.org/en/stable/
+
+
+14.
+The problem with Flask async views and async globals
+https://dev.to/sethmlarson/the-problem-with-flask-async-views-and-async-globals-pl
+
+
+15.
+Flask想上線? 你還需要一些酷東西
+https://minglunwu.github.io/notes/2021/flask_plus_wsgi.html
+
+
+16.
+Concurrency and async / await
+https://fastapi.tiangolo.com/async/
+
+
+Asynchronous Code
+https://fastapi.tiangolo.com/async/#technical-details
+
+
+Concurrency and Burgers
+https://fastapi.tiangolo.com/async/#concurrency-and-burgers
+
+
+Speeding Up Python with Concurrency, Parallelism, and asyncio
+https://testdriven.io/blog/concurrency-parallelism-asyncio/
+
+
+17.
+ML model deployment option with concurrency (Flask + uWSGI)
+https://medium.com/roonyx/ml-model-deployment-option-with-concurrency-flask-uwsgi-4aeafea0d07e
+
+
+18. 
+Deploy Machine Learning Model using Flask
+https://www.geeksforgeeks.org/deploy-machine-learning-model-using-flask/
+
+
+19.
+How to Deploy Machine Learning Models using Flask (with Code!)
+https://www.analyticsvidhya.com/blog/2020/04/how-to-deploy-machine-learning-model-flask/
+
+
+20.
+An End-to-End Guide on Approaching an ML Problem and Deploying It Using Flask and Docker
+https://www.analyticsvidhya.com/blog/2021/10/an-end-to-end-guide-on-approaching-an-ml-problem-and-deploying-it-using-flask-and-docker/
+
+
+21.
+Deploying Machine Learning Models using Flask
+https://www.section.io/engineering-education/deploying-machine-learning-models-using-flask/
+
+
+22.
+推荐算法+可视化 vue+flask 爬虫大数据项目架构思路分享
+https://segmentfault.com/a/1190000041557042
+https://github.com/redcomet88/redcomet88
+
+
+23.
+Tutorial: How to use Vue components in Flask
+https://www.reddit.com/r/flask/comments/qxmjxg/tutorial_how_to_use_vue_components_in_flask/
+
+Web Development with Python and Vue.js Components
+https://blog.reverielabs.com/python-vue-components/
+
+Full-stack single page application with Vue.js and Flask
+https://codeburst.io/full-stack-single-page-application-with-vue-js-and-flask-b1e036315532
+
+https://github.com/oleg-agapov/flask-vue-spa
+
+
+
+24.
+WSGI
+https://zh.wikipedia.org/zh-tw/Web%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BD%91%E5%85%B3%E6%8E%A5%E5%8F%A3
+Web伺服器閘道介面（Python Web Server Gateway Interface，縮寫為WSGI）是為Python語言定義的Web伺服器和Web應用程式或框架之間的一種簡單而通用的介面
+
+https://ithelp.ithome.com.tw/articles/10157271
+Django 到底是怎麼用你的程式？這就要從 WSGI 開始說起。
+絕大多數用 Python 寫成的網路服務，在本質上都是一個 WSGI 應用程式。WSGI，亦即「web server gateway interface」，
+是一個由 Python 官方制定，用來統一伺服器程式與 Python 程式之間溝通方式的標準。
+
+每個 WSGI 應用程式，都需要搭配一個 WSGI 伺服器來執行。當一個 WSGI 伺服器被啟動時，會進行以下的動作：
+
+1)初始化。
+2)設定環境變數等執行參數。
+3)找到與它對應的 WSGI 應用程式。
+4)進入一個迴圈，不斷等待來自網路的請求（requests）。
+5)當得到請求時，呼叫 WSGI 應用程式，並告知該請求內部的參數與資料。
+6)回到迴圈。
+重複 2—4，直到使用者或系統要求它停止。
+
+當你建立一個 Django 專案時，Django 會自動幫你產生一個 WSGI 應用程式。你寫的所有程式，都不會被直接使用，
+而是由那個 WSGI 程式在執行時，視需求自動 import 元件來使用。
+所以當你使用 Django 開發時，可能會覺得好像建立了一堆東西，但是它們都沒有被呼叫。
+沒什麼好擔心的，呼叫它們是 WSGI 應用程式的工作！
+
+
+25.
+python3-部署Flask 到 Nginx (實際生產環境)
+https://jeffwen0105.com/1759-2/
+
+https://jeffwen0105.com/python-%E4%BD%BF%E7%94%A8flask-%E8%A3%BD%E4%BD%9C%E7%B0%A1%E5%96%AE%E7%9A%84%E7%99%BB%E5%85%A5%E5%8F%8A%E7%99%BB%E5%87%BA%E7%B6%B2%E7%AB%99/
+
+
+26.
+https://kknews.cc/zh-tw/code/jaxxmge.html
+
+配置Supervisor環境
+在production環境，起停和狀態的監控最好用supervisior之類的進程管理，監控工具。
+supervisor是一個用python語言編寫的進程管理工具，supervisor 能將一個普通的命令行進程變為後台daemon，
+它可以很方便的監聽、啟動、停止、重啟一個或多個進程。當一個進程意外被殺死，supervisor監聽到進程死後，
+可以很方便的讓進程自動恢復，不再需要程式設計師或系統管理員自己編寫代碼來控制。可以運行在各種類unix的機器上。
+1，安裝
+sudo apt-get install supervisor #ubuntu下安裝
+也可以用pip安裝，但是推薦用apt-get安裝，節省一些配置得步驟。
+原文網址：https://kknews.cc/code/jaxxmge.html
+將一個flask項目上傳到linux伺服器生產環境，總結起來分為以下幾步：
+
+1，配置LNMP環境：首先得有linux伺服器，其次配置python環境，mysql環境，nginx環境。
+這樣其實就已經可以上線運行了，可是，flask的內置伺服器不適合生產環境使用，這個時候需要加入真正的WSGI伺服器。
+
+2，配置Gunicorn WSGI伺服器環境
+有了真正伺服器，那麼還需要一個統一管理進程的工具，進行啟動，重啟，開啟多進程，集中式管理。
+
+3，配置Supervisor進程管理工具環境
+
+
+
+27. 
+使用 Flask 和 Vue.js 来构建全栈单页应用
+https://learnku.com/python/t/24985
+
+
+28. 
+Myths About Asynchronous PHP: It Is Not Truly Asynchronous
+https://sergeyzhuk.me/2021/03/03/myths-about-asynchronous-php/

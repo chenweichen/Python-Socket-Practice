@@ -1,0 +1,48 @@
+# FastAPI_python Issues 
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+09 : FastAPI Connecting to a Database
+https://www.fastapitutorial.com/blog/database-connection-fastapi/
+
+
+2.
+The Ultimate FastAPI Tutorial Part 7 - Database Setup with SQLAlchemy and Alembic
+https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-7-sqlalchemy-database-setup/
+
+
+3.
+【快速上車 FastAPI，感受開發快感】 - 資料庫連線及操作
+https://theoohoho.github.io/2021/01/20/fastapi-ch5/
+
+
+4.
+SQLAlchemy
+https://docs.sqlalchemy.org/en/14/dialects/
+
+Python & SQLALchemy 學習筆記_JSON 欄位操作
+https://ithelp.ithome.com.tw/m/articles/10282764
+
+
+5.
+Fast API 入門筆記 (二) - Typing Hint & Async
+https://minglunwu.github.io/notes/2021/fast_api_note_2.html
+
+
+6.
+Deploying and Hosting a Machine Learning Model with FastAPI and Heroku
+https://testdriven.io/blog/fastapi-machine-learning/
+
+
+7.
+Deploying and Hosting a Machine Learning Model with FastAPI and Heroku
+https://github.com/testdrivenio/fastapi-ml
+
+
+8.
+Asynchronous Code
+https://fastapi.tiangolo.com/async/#technical-details
