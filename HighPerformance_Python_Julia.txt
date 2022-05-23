@@ -108,3 +108,18 @@ https://fastapi.tiangolo.com/async/#technical-details
 
 
 
+6.
+asyncio — Asynchronous I/O
+https://docs.python.org/3.9/library/asyncio.html
+
+
+https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-1.html
+
+
+https://djangostars.com/blog/asynchronous-programming-in-python-asyncio/
+
+
+https://www.datacamp.com/tutorial/asyncio-introduction
+
+
+
