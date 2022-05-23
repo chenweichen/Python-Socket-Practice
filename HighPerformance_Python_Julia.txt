@@ -1,0 +1,110 @@
+# High Performance (Mutliprocess/Multithreading) for Python and Julia 
+
+## No.:
+## Title:
+## https links: 
+
+[Julia Lang part] 
+
+1.
+What scientists must know about hardware to write fast code
+https://github.com/jakobnissen/hardware_introduction
+
+https://viralinstruction.com/posts/hardware/
+
+
+
+2.
+Julia for Economists Bootcamp, 2022
+https://github.com/cpfiffer/julia-bootcamp-2022
+
+
+https://github.com/cpfiffer/julia-bootcamp-2022#session-2-parallelization
+
+https://www.youtube.com/watch?v=trhsvOAH0YI
+https://github.com/cpfiffer/julia-bootcamp-2022/blob/main/session-2/parallelization-lecture.ipynb
+
+
+https://github.com/cpfiffer/julia-bootcamp-2022#session-4-high-performance-julia
+
+https://youtu.be/i35LlZWZl1g
+https://github.com/cpfiffer/julia-bootcamp-2022/blob/main/session-4/speed-lecture.ipynb
+
+
+
+3.
+Hands-On Design Patterns and Best Practices with Julia
+https://github.com/PacktPublishing/Hands-on-Design-Patterns-and-Best-Practices-with-Julia
+
+
+
+4.
+A quick introduction to data parallelism in Julia
+https://juliafolds.github.io/data-parallelism/tutorials/quick-introduction/
+
+
+
+5.
+Parallelization
+https://enccs.github.io/Julia-for-HPC/parallelization/
+
+
+GPU programming
+https://enccs.github.io/Julia-for-HPC/GPU/
+
+
+
+6.
+[ANN] Folds.jl: threaded, distributed, and GPU-based high-level data-parallel interface for Julia
+https://discourse.julialang.org/t/ann-folds-jl-threaded-distributed-and-gpu-based-high-level-data-parallel-interface-for-julia/54701/3
+
+
+https://github.com/JuliaFolds/ParallelMagics.jl
+
+https://github.com/JuliaFolds
+
+
+
+
+
+/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
+
+[Python part]
+
+1.
+多執行緒 — Python Threading
+https://medium.com/ching-i/%E5%A4%9A%E5%9F%B7%E8%A1%8C%E7%B7%92-python-threading-52e1dfb3d5c9
+
+https://github.com/chingi071/Thread
+
+多執行緒
+https://medium.com/ching-i/%E5%A4%9A%E5%9F%B7%E8%A1%8C%E7%B7%92-de16f92944c8
+
+
+
+2.
+Concurrency in Python - Quick Guide
+https://www.tutorialspoint.com/concurrency_in_python/concurrency_in_python_quick_guide.htm
+
+
+
+3.
+Python Concurrency Tutorial
+https://medium.com/@santiagobasulto/python-concurrency-tutorial-a5a8aee3b595
+
+https://github.com/santiagobasulto/pycon-concurrency-tutorial-2020
+
+
+
+4.
+Python 的 concurrency 和 parallelization
+https://medium.com/@alan81920/python-%E7%9A%84-concurrency-%E5%92%8C-parallelization-efeddcb30c4c
+
+
+
+5.
+Asynchronous Code
+https://fastapi.tiangolo.com/async/#technical-details
+
+
+
