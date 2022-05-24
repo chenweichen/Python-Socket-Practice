@@ -65,6 +65,36 @@ https://github.com/JuliaFolds
 
 
 
+7.
+Announcing composable multi-threaded parallelism in Julia
+https://julialang.org/blog/2019/07/multithreading/
+
+
+
+8.
+Using Julia
+https://www.carc.usc.edu/user-information/user-guides/software-and-programming/julia
+
+# Parallel programming with Julia
+Package	                Purpose
+Base.Threads	        For explicit multi-threading
+Distributed	            For explicit multi-processing
+MPI.jl	                For interfacing to MPI libraries
+DistributedArrays.jl	For working with distributed arrays
+Elemental.jl	        For distributed linear algebra
+ClusterManagers.jl	    For launching jobs via cluster job schedulers (e.g., Slurm)
+Dagger.jl	            For asynchronous evaluations and workflows
+CUDA.jl	                For interfacing to Nvidia CUDA GPUs
+
+
+
+9.
+ML ⇌ Science Colaboratory's workshop Introduction to Machine Learning.
+Supervised learning: One step at a time
+https://github.com/mlcolab/IntroML.jl/blob/main/notebooks/supervised_learning.jl
+
+https://mlcolab.github.io/IntroML.jl/dev/supervised_learning.html
+
 
 
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
