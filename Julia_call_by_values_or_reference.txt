@@ -1,0 +1,41 @@
+#Julia call by value or by reference 
+
+
+In julia functions : passed by reference or value?
+https://stackoverflow.com/questions/38936868/in-julia-functions-passed-by-reference-or-value
+ 
+The key fact, however, is that all values are manipulated by reference.  
+– StefanKarpinski Aug 13, 2016 at 22:19 
+ 
+ 
+https://stackoverflow.com/questions/35235597/julia-function-argument-by-reference
+ 
+ 
+https://stackoverflow.com/questions/33002572/creating-copies-in-julia-with-operator
+ 
+The confusion stems from this: assignment and mutation are not the same thing.
+
+Assignment. Assignment looks like x = ... – what's left of the = is an identifier, i.e. a variable name. Assignment changes which object the variable x refers to (this is called a variable binding). It does not mutate any objects at all.
+
+Mutation. There are two typical ways to mutate something in Julia: x.f = ... – what's left of the = is a field access expression; x[i] = ... – what's left of the = is an indexing expression. Currently, field mutation is fundamental – that syntax can only mean that you are mutating a structure by changing its field. This may change. Array mutation syntax is not fundamental – x[i] = y means setindex!(x, y, i) and you can either add methods to setindex! or locally change which generic function setindex!. Actual array assignment is a builtin – a function implemented in C (and for which we know how to generate corresponding LLVM code).
+
+Mutation changes the values of objects; it doesn't change any variable bindings. After doing either of the above, the variable x still refers to the same object it did before; that object may have different contents, however. In particular, if that object is accessible from some other scope – say the function that called one doing the mutation – then the changed value will be visible there. But no bindings have changed – all bindings in all scopes still refer to the same objects.
+
+You'll note that in this explanation I never once talked about mutability or immutability. That's because it has nothing to do with any of this – mutable and immutable objects have exactly the same semantics when it comes to assignment, argument passing, etc. The only difference is that if you try to do x.f = ... when x is immutable, you will get an error.
+
+ 
+https://docs.julialang.org/en/v1/manual/faq/#I-passed-an-argument-x-to-a-function,-modified-it-inside-that-function,-but-on-the-outside,-the-variable-x-is-still-unchanged.-Why?
+ 
+ 
+https://docs.julialang.org/en/v1/manual/noteworthy-differences/
+ 
+Julia arrays are indexed with square brackets, A[i,j]. 
+Julia arrays are not copied when assigned to another variable. After A = B, changing elements of B will modify A as well. 
+Julia values are not copied when passed to a function. If a function modifies an array, the changes will be visible in the caller. 
+Julia does not automatically grow arrays in an assignment statement. Whereas in MATLAB a(4) = 3.2 can create the array a = [0 0 0 3.2] and a(5) = 7 can grow it into a = [0 0 0 3.2 7], the corresponding Julia statement a[5] = 7 throws an error if the length of a is less than 5 or if this statement is the first use of the identifier a. Julia has push! and append!, which grow Vectors much more efficiently than MATLAB's a(end+1) = val.
+In Julia, the elements of a collection can be passed as arguments to a function using the splat operator ..., as in xs=[1,2]; f(xs...). 
+ 
+In Julia, values are not copied when assigned or passed to a function. If a function modifies an array, the changes will be visible in the caller. This is very different from R and allows new functions to operate on large data structures much more efficiently.
+
+.
+Julia values are not copied when assigned or passed to a function. If a function modifies an array, the changes will be visible in the caller. 
