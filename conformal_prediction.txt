@@ -1,0 +1,20 @@
+# Conformal Prediction
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+Conformal prediction beyond exchangeability
+https://arxiv.org/abs/2202.13415
+
+
+Distribution-free prediction: exchangeability and beyond
+https://imstat.org/2022/04/01/medallion-lecture-rina-foygel-barber/
+
+
+
+2.
+
+
