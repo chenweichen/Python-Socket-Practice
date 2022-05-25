@@ -262,3 +262,28 @@ https://learnku.com/python/t/24985
 28. 
 Myths About Asynchronous PHP: It Is Not Truly Asynchronous
 https://sergeyzhuk.me/2021/03/03/myths-about-asynchronous-php/
+
+
+
+29.
+Calling REST API of a Flask app from another Flask app
+https://stackoverflow.com/questions/59549527/calling-rest-api-of-a-flask-app-from-another-flask-app
+
+
+
+30.
+Integrating an External API into a Flask Application
+https://www.section.io/engineering-education/integrating-external-apis-with-flask/
+
+
+31.
+Complete Guide on Rest API with Python and Flask
+https://www.analyticsvidhya.com/blog/2022/01/rest-api-with-python-and-flask/
+
+
+
+32.
+Flask: An Easy Access Door to API development
+https://towardsdatascience.com/flask-an-easy-access-door-to-api-development-2147ae694ceb
+
+https://github.com/tseth92/flask_simplified
