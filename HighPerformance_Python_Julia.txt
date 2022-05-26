@@ -97,6 +97,21 @@ https://mlcolab.github.io/IntroML.jl/dev/supervised_learning.html
 
 
 
+10.
+The Enzyme High-Performance Automatic Differentiator of LLVM
+https://github.com/EnzymeAD/Enzyme
+High-performance automatic differentiation of LLVM.
+
+
+https://github.com/EnzymeAD/Enzyme.jl
+Julia bindings for the Enzyme automatic differentiator
+
+
+https://github.com/EnzymeAD/oxide-enzyme
+Enzyme integration into Rust. Experimental, do not use.
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
