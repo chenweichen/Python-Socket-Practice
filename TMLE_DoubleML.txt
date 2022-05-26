@@ -1,0 +1,199 @@
+#double machine learning and targeted maximum likelihood estimation
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+CV-TMLE and double machine learning
+https://vanderlaan-lab.org/2019/12/24/cv-tmle-and-double-machine-learning/
+
+Thanks for this interesting question. In the past several years, 
+the interest in these machine learning-based estimators has become more widespread, 
+since they allow for the statistical answer to a question to be framed 
+in terms of scientifically meaningful parameters (e.g., defined through causal inference), 
+incorporating machine learning in the estimation process, 
+while providing formal statistical inference.
+
+
+
+2.
+Cross-validated Targeted Maximum Likelihood Estimation (CV-TMLE)
+Double machine learning for added robustness
+Alan Hubbard 
+Division of Biostatistics
+University of California at Berkeley
+October 22 2020
+https://putnamds.com/FDA_Hubbard_CVTMLE.pdf
+
+
+
+3.
+Causal Inference using Targeted Maximum Likelihood Estimation
+Duc Hieu Do
+http://arno.uvt.nl/show.cgi?fid=156285
+
+
+
+4.
+Targeted Maximum Likelihood for ATE, why not just GLM for ATE?
+https://stats.stackexchange.com/questions/550318/targeted-maximum-likelihood-for-ate-why-not-just-glm-for-ate
+
+The answer is double robustness. 
+Like all doubly-robust methods, with TMLE you get two chances to get the model correct 
+and the treatment effect estimate is consistent if either is correct (or approach at a given rate). 
+With g-computation using a GLM, you only get one chance to get the model right. 
+If that model is wrong (and it almost certainly is), then your treatment effect estimate is not consistent. 
+You can use flexible machine learning methods with TMLE that are more likely to approximate the true form of either the treatment and outcome model. 
+Indeed, given the inability of an outcome model GLM to even plausibly capture the true outcome model, 
+one should almost never use it to estimate treatment effect, 
+whereas TMLE should be among your first choices.
+
+
+
+5.
+An Illustrated Guide to TMLE, Part I: Introduction and Motivation
+https://www.khstats.com/blog/tmle/tutorial/
+
+
+https://github.com/kathoffman
+
+https://twitter.com/kat_hoffman_
+
+
+Targeted Maximum Likelihood Estimation (TMLE) is a semiparametric estimation 
+framework to estimate a statistical quantity of interest. 
+TMLE allows the use of machine learning (ML) models which place 
+minimal assumptions on the distribution of the data. 
+Unlike estimates normally obtained from ML, 
+the final TMLE estimate will still have valid standard errors for 
+statistical inference.
+
+
+Table of Contents
+This blog post series has three parts:
+
+Part I: Motivation
+    TMLE in three sentences 🎯
+    An Analyst’s Motivation for Learning TMLE 👩🏼‍💻
+    Is TMLE Causal Inference? 🤔
+
+Part II: Algorithm
+    Why the Visual Guide? 🎨
+    TMLE, Step-by-Step 🚶🏽
+    Using the tmle package 📦
+
+Part III: Evaluation
+    Properties of TMLE 📈
+    Why does TMLE work? ✨
+    Resources to learn more 🤓
+
+
+
+6.
+Targeted Maximum Likelihood Estimation for a Binary Outcome: Tutorial and Guided Implementation
+https://migariane.github.io/TMLE.nb.html
+
+
+Miguel Angel Luque Fernandez, MA, MPH, MSc, Ph.D 
+https://maluque.netlify.com/
+
+
+Last update: 5/5/2019 
+https://scholar.harvard.edu/malf/home
+
+
+
+7.
+Targeted Maximum Likelihood Learning
+University of California, Berkeley
+U.C. Berkeley Division of Biostatistics Working Paper Series
+Mark J. van der Laan∗ Daniel Rubin
+https://www.stat.cmu.edu/~ryantibs/journalclub/vanderlaan_2006.pdf
+
+
+
+8.
+R Package: tmle 
+https://cran.r-project.org/web/packages/tmle/tmle.pdf
+
+
+
+9.
+TargetedLearning.jl 
+https://lendle.github.io/TargetedLearning.jl/
+
+Targeted minimum loss-based estimation (TMLE) (sometimes targeted maximum likelihood estimation) is 
+a general framework for constructing regular, asymptotically linear estimators for pathwise differentiable parameters 
+with additional properties such as asymptotic efficiency and double robustness. 
+For background and details, see Targeted Learning by van der Laan and Rose, or articles on TMLE.
+
+
+https://github.com/lendle/TargetedLearning.jl/
+
+
+
+10.
+On doubly robust inference for double machine learning
+https://arxiv.org/abs/2107.06124
+
+
+
+11.
+Handling missing data when estimating causal effects with Targeted Maximum Likelihood Estimation
+https://arxiv.org/abs/2112.05274
+
+
+
+12.
+Statistics in Julia - Maximum Likelihood Estimation.ipynb
+https://github.com/johnmyleswhite/julia_tutorials/blob/master/Statistics%20in%20Julia%20-%20Maximum%20Likelihood%20Estimation.ipynb
+
+
+https://github.com/johnmyleswhite/julia_tutorials
+
+
+
+13.
+MAXIMUM LIKELIHOOD ESTIMATION (MLE) IN JULIA: THE OLS EXAMPLE
+https://juliaeconomics.com/2014/06/16/numerical-maximum-likelihood-the-ols-example/
+
+
+
+14.
+Scalable collaborative targeted learning for high-dimensional data
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6086775/
+
+Stat Methods Med Res. Author manuscript; available in PMC 2018 Aug 11.
+Published in final edited form as:
+Stat Methods Med Res. 2019 Feb; 28(2): 532–554.
+Published online 2017 Sep 22. doi: 10.1177/0962280217729845
+
+
+
+15.
+A fast algorithm for maximum likelihood estimation of mixture proportions using sequential quadratic programming
+https://arxiv.org/abs/1806.01412
+
+
+https://arxiv.org/pdf/1806.01412.pdf
+
+A Fast Algorithm for Maximum Likelihood
+Estimation of Mixture Proportions Using
+Sequential Quadratic Programming
+
+
+https://github.com/stephenslab/mixsqp-paper
+
+
+https://github.com/stephenslab/mixSQP
+
+
+
+16.
+Maximum likelihood estimation
+https://jump.dev/JuMP.jl/stable/tutorials/nonlinear/mle/
+
+Use nonlinear optimization to compute the maximum likelihood estimate (MLE) of 
+the parameters of a normal distribution, a.k.a., the sample mean and variance.
