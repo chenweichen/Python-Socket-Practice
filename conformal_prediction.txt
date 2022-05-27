@@ -16,5 +16,37 @@ https://imstat.org/2022/04/01/medallion-lecture-rina-foygel-barber/
 
 
 2.
+Conformalized Online Learning: Online Calibration Without a Holdout Set
+https://stephenbates19.github.io/research.html
+
+
+https://arxiv.org/abs/2205.09095
+We develop a framework for constructing uncertainty sets with a valid coverage guarantee in an online setting, 
+in which the underlying data distribution can drastically -- and even adversarially -- shift over time. 
+The technique we propose is highly flexible as it can be integrated with any online learning algorithm, 
+requiring minimal implementation effort and computational cost. 
+A key advantage of our method over existing alternatives -- which also build on conformal inference -- is that 
+we do not need to split the data into training and holdout calibration sets. 
+This allows us to fit the predictive model in a fully online manner, utilizing the most recent observation 
+for constructing calibrated uncertainty sets. 
+Consequently, and in contrast with existing techniques, (i) the sets we build can quickly adapt to new changes in the distribution; 
+and (ii) our procedure does not require refitting the model at each time step. 
+Using synthetic and real-world benchmark data sets, we demonstrate the validity of our theory 
+and the improved performance of our proposal over existing techniques. 
+To demonstrate the greater flexibility of the proposed method, we show how to construct valid intervals 
+for a multiple-output regression problem that 
+previous sequential calibration methods cannot handle due to impractical computational and memory requirements.
+
+
+Reliable Predictive Inference in Time-Series Settings
+https://github.com/Shai128/rci
+
+An important factor to guarantee a responsible use of data-driven systems is 
+that we should be able to communicate their uncertainty to decision makers. 
+This can be accomplished by constructing prediction sets, 
+which provide an intuitive measure of the limits of predictive performance.
+
+This package contains a Python implementation of Rolling Conformal Inference (Rolling CI) [1] methodology 
+for constructing distribution-free prediction sets.
 
 
