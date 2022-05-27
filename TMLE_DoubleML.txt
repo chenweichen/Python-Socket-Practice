@@ -90,6 +90,11 @@ Part III: Evaluation
     Resources to learn more 🤓
 
 
+https://github.com/kathoffman/causal-inference-visual-guides
+
+https://github.com/kathoffman/lmtp
+
+
 
 6.
 Targeted Maximum Likelihood Estimation for a Binary Outcome: Tutorial and Guided Implementation
@@ -197,3 +202,71 @@ https://jump.dev/JuMP.jl/stable/tutorials/nonlinear/mle/
 
 Use nonlinear optimization to compute the maximum likelihood estimate (MLE) of 
 the parameters of a normal distribution, a.k.a., the sample mean and variance.
+
+
+
+17.
+1. Targeted Machine Learning for Causal Inference based on Real World Data
+https://www.youtube.com/watch?v=PrPNP5RVcLg
+
+
+2. An Introduction toTargeted Maximum Likelihood Estimation of Causal Effects
+https://www.youtube.com/watch?v=8Q9dfW3oOi4
+
+
+Cross-validated Targeted Maximum Likelihood Estimation (CV-TMLE)
+https://www.youtube.com/watch?v=MDmddX267Ys
+
+
+July 22nd 3 Tutorial Towards Causal Reinforcement Learning
+https://www.youtube.com/watch?v=W20GWMzME5w
+
+
+
+18.
+[SER 2021 Workshop] Targeted Learning in the tlverse: Causal Inference Meets Machine Learning
+https://tlverse.org/ser2021-workshop/index.html
+
+https://github.com/tlverse/ser2021-workshop
+
+
+
+19.
+Teaching Courses taught by Mark van der Laan
+https://vanderlaan-lab.org/teaching/
+
+
+The Research Group of Mark van der Laan Computational Biology and Causality
+https://vanderlaan-lab.org
+
+
+Targeted Learning in Biomedical Big Data, offered in the Spring 2018 semester at UC Berkeley.
+https://vanderlaan-group.github.io/tlbbd-sp2018/
+
+Spring 2018 Syllabus Targeted Learning in Biomedical Big Data 
+https://github.com/vanderLaan-Group/tlbbd-sp2018/blob/sources/static/materials/syllabus.pdf
+
+Course Description:
+This course teaches students how to construct efficient estimators and obtain robust inference for parameters 
+that utilize data-adptive estimation strategies (i.e., machine learning). 
+
+Requirements and Materials:
+Targeted Learning: Causal Inference for Observational and Experimental Data by Mark J.van der Laan (2011)
+vdL&R (2011)
+
+Targeted Learning in Data Science: Causal Inference for Complex Longitudinal Studies by Mark J. van der Laan 
+vdL&R (2017)
+
+
+
+https://github.com/orgs/tlbbd-sp2018/repositories
+
+https://github.com/vanderLaan-Group/tlbbd-sp2018/blob/sources/content/onepage/03-causal_mod-part.md
+
+https://github.com/tlbbd-spring2018/lab_03
+
+http://nbviewer.jupyter.org/github/tlbbd-spring2018/lab_03/blob/master/lab_03.ipynb
+
+https://github.com/tlbbd-sp2018/lab_01
+
+

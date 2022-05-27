@@ -112,6 +112,144 @@ Enzyme integration into Rust. Experimental, do not use.
 
 
 
+11.
+Julia v1.7 Release Notes
+https://github.com/JuliaLang/julia/blob/master/HISTORY.md#julia-v17-release-notes
+
+
+Multidimensional Array Literals
+https://julialang.org/blog/2021/11/julia-1.7-highlights/#multidimensional_array_literals
+
+
+
+https://github.com/JuliaLang/julia/issues/39285
+
+https://github.com/JuliaLang/julia/issues/45461
+
+https://docs.julialang.org/en/v1/base/arrays/#Base.hvncat
+
+https://github.com/JuliaLang/julia/blob/7e54f9a069df2b382f765d5574787293c816fe26/base/abstractarray.jl#L2119
+
+
+https://github.com/JuliaLang/julia/blob/master/HISTORY.md#language-changes-1
+Multiple successive semicolons in an array expresion were previously ignored (e.g., [1 ;; 2] == [1 ; 2]). This syntax is now used to separate dimensions (see New language features).
+
+v1 = [1, 2] # 2-element Vector{Int64}:
+v2 = [3, 4] # 2-element Vector{Int64}:
+
+[v1, v2] # 2-element Vector{Vector{Int64}}:
+# [1, 2]
+# [3, 4]
+
+[v1; v2] # 4-element Vector{Int64}:
+# 1
+# 2
+# 3
+# 4
+
+[v1;; v2] # 2×2 Matrix{Int64}:
+# 1  3
+# 2  4
+
+[1,2,3 ;; 4,5,6] # syntax: unexpected semicolon in array expression
+
+[1;2;3 ;;4;5;6] #3×2 Matrix{Int64}:
+# 1  4
+# 2  5
+# 3  6
+
+
+Meta.@lower [1 2;;; 3 4]
+:($(Expr(:thunk, CodeInfo(
+    @ none within `top-level scope`
+1 ─ %1 = Core.tuple(1, 2, 2)
+│   %2 = Base.hvncat(%1, true, 1, 2, 3, 4)
+└──      return %2
+))))
+
+Meta.@lower [v1;;v2]
+:($(Expr(:thunk, CodeInfo(
+    @ none within `top-level scope`
+1 ─ %1 = Base.hvncat(2, v1, v2)
+└──      return %1
+))))
+
+Meta.@lower [v1;v2]
+:($(Expr(:thunk, CodeInfo(
+    @ none within `top-level scope`
+1 ─ %1 = Base.vcat(v1, v2)
+└──      return %1
+))))
+
+Meta.@lower [v1, v2]
+:($(Expr(:thunk, CodeInfo(
+    @ none within `top-level scope`
+1 ─ %1 = Base.vect(v1, v2)
+└──      return %1
+))))
+
+Meta.@lower[1 2;;
+       3 4]
+:($(Expr(:thunk, CodeInfo(
+    @ none within `top-level scope`
+1 ─ %1 = Base.hcat(1, 2, 3, 4)
+└──      return %1
+))))
+
+
+Property Destructuring
+https://julialang.org/blog/2021/11/julia-1.7-highlights/#property_destructuring
+
+https://github.com/JuliaLang/julia/blob/master/HISTORY.md#new-language-features-1
+(; a, b) = x can now be used to destructure properties a and b of x. This syntax is equivalent to a = getproperty(x, :a); b = getproperty(x, :b)
+
+
+
+
+
+New features coming in Julia 1.7
+https://lwn.net/Articles/871486/
+
+
+https://julialang.org/blog/2021/11/julia-1.7-highlights/
+
+
+
+12.
+Concurrency in Julia
+https://lwn.net/Articles/875367/
+
+The Julia programming language has its roots in high-performance scientific computing, 
+so it is no surprise that it has facilities for concurrent processing. 
+Those features are not well-known outside of the Julia community, 
+though, so it is interesting to see the different types of parallel and concurrent computation that the language supports. 
+In addition, the upcoming release of Julia version 1.7 brings an improvement to the language's concurrent-computation palette, 
+in the form of "task migration".
+
+
+
+13.
+libblastrampoline + MKL.jl
+https://julialang.org/blog/2021/11/julia-1.7-highlights/#libblastrampoline_mkljl
+Julia v1.7 introduces a new BLAS demuxing library called libblastrampoline (LBT), 
+that provides a flexible and efficient way to switch the backing BLAS library at runtime. 
+Because the BLAS/LAPACK API is "pure" (e.g. each BLAS/LAPACK invocation is separate from any other; 
+there is no carryover state from one API call to another) it is possible to switch 
+which BLAS backend actually services a particular client API call, such as a DGEMM call for
+a Float64 Matrix-Matrix multiplication. This statelessness enables us to easily switch from one BLAS backend
+to another without needing to modify client code, and combining this with a flexible wrapper implementation, 
+we are able to provide a single, coherent API that automatically adjusts for a variety of BLAS/LAPACK providers 
+across all the platforms that Julia itself supports.
+
+
+
+14.
+https://runebook.dev/en/docs/julia/-index-
+
+https://runebook.dev
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
