@@ -1,0 +1,96 @@
+#Rustlang and its applications
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+Rustlang official website
+https://www.rust-lang.org/tools/install
+
+
+https://www.rust-lang.org/learn
+
+
+https://www.rust-lang.org/what/embedded
+
+
+https://github.com/rust-embedded/awesome-embedded-rust
+
+
+Rust by Examples 
+https://doc.rust-lang.org/stable/rust-by-example/index.html
+
+
+
+2.
+Rust LinearAlgebra 
+https://nalgebra.org/docs/user_guide/vectors_and_matrices
+
+
+https://rust-lang-nursery.github.io/rust-cookbook/science.html
+
+
+
+3.
+We Rewrote Our IoT Platform in Rust and Got Away With It
+https://medium.com/dwelo-r-d/we-rewrote-our-iot-platform-in-rust-and-got-away-with-it-2c8867c61b67
+
+
+
+4.
+Rust with Arduino
+https://dev.to/creativcoder/how-to-run-rust-on-arduino-uno-40c0
+
+https://chipwired.com/programming-arduino-with-rust/
+
+
+
+5.
+[Rust] 程式設計教學
+https://jasonblog.github.io/note/Rust/rust_programming.html
+
+
+
+6.
+WebAssembly + Rust 的前端應用
+https://ithelp.ithome.com.tw/users/20119807/ironman/2447
+
+
+[Day 7] Rust Variables and Mutability 變數和可變性
+https://ithelp.ithome.com.tw/articles/10218565
+
+
+7.
+Rust 新手村
+https://ithelp.ithome.com.tw/users/20129675/ironman/4260
+
+
+Rust-並行&並發(一)
+https://ithelp.ithome.com.tw/articles/10277734
+
+有關於並行和並發的定義每個人可能有不一樣的解釋
+並行指的是在同一時刻，多條指令在 CPU 上同時執行
+並發指的是在同一時間區間內，多條指令在 CPU 上同時執行
+
+Rust-並行&並發(二)
+https://ithelp.ithome.com.tw/articles/10278240
+
+
+
+9.
+Interaction between Julia and Rust
+https://stackoverflow.com/questions/51916904/interaction-between-julia-and-rust
+
+Calling/Executing Rust function from Julia
+Calling/Executing Julia from Rust
+
+
+https://github.com/alexcrichton/rust-ffi-examples/tree/a2ddf21e4/julia-to-rust
+
+
+Julia bindings for Rust
+https://github.com/Taaitaaiger/jlrs
+
+

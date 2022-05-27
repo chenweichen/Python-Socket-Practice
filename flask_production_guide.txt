@@ -287,3 +287,35 @@ Flask: An Easy Access Door to API development
 https://towardsdatascience.com/flask-an-easy-access-door-to-api-development-2147ae694ceb
 
 https://github.com/tseth92/flask_simplified
+
+
+
+33.
+[Day 30] 使用 Heroku 部署機器學習 API
+https://ithelp.ithome.com.tw/articles/10280857
+
+
+[Day 29] 使用 Python Flask 架設 API 吧！
+https://ithelp.ithome.com.tw/articles/10280422
+
+
+[Day 28] 儲存訓練好的模型
+https://ithelp.ithome.com.tw/articles/10280076
+
+
+全民瘋AI系列2.0
+https://github.com/andy6804tw/2021-13th-ironman
+
+
+
+34.
+Deploying-Flask-To-Heroku
+https://github.com/twtrubiks/Deploying-Flask-To-Heroku/blob/master/README.md
+
+
+
+35.
+如何使用 Heroku 部屬一個 Web App 網頁應用程式
+https://blog.techbridge.cc/2020/03/08/how-to-use-heroku-to-deploy-clear-mysql-db-web-app-tutorial/
+
+
