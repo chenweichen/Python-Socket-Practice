@@ -270,3 +270,36 @@ http://nbviewer.jupyter.org/github/tlbbd-spring2018/lab_03/blob/master/lab_03.ip
 https://github.com/tlbbd-sp2018/lab_01
 
 
+
+20.
+Machine learning in the estimation of causal effects: targeted minimum loss-based estimation and double/debiased machine learning
+https://academic.oup.com/biostatistics/article/21/2/353/5631845?login=false
+
+Biostatistics, Volume 21, Issue 2, April 2020, Pages 353–358, https://doi.org/10.1093/biostatistics/kxz042
+
+A limitation of the original TMLE formulation is that it imposed an assumption on the statistical model for the nuisance parameters. 
+The “uniform” central limit theorem necessary to derive the asymptotic distribution for the TMLE 
+requires that the nuisance functions are elements of Donsker classes, which are classes of functions with limited entropy. 
+This assumption is problematic in the context of machine learning because 
+it is not satisfied by many estimation methods, e.g., those which yield functions with unbounded variation. 
+The solution to this problem, named cross-validated TMLE (Zheng and van der Laan, 2011), uses sample-splitting to obtain out-of-sample estimates 
+of the nuisance parameters, an idea that dates back to at least (Bickel, 1982). 
+Because the nuisance estimates are constructed using out-of-sample data, asymptotic arguments 
+for the validation sample can be made conditional on the training sample, and then averaged across validation samples, thus avoiding the Donsker condition.
+
+Zheng, W. and van der Laan, M. J. (2011). Cross-validated targeted minimum-loss-based estimation. 
+In: Targeted Learning. New York, NY: Springer, pp. 459–474.
+
+
+The TMLE Framework
+https://tlverse.org/tlverse-handbook/tmle3.html
+
+
+Collaborative Targeted Maximum Likelihood Estimation
+https://cran.r-project.org/web/packages/ctmle/readme/README.html
+
+
+An Easy Implementation of CV-TMLE
+https://arxiv.org/abs/1811.04573
+
+
