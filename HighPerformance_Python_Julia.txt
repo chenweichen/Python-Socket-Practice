@@ -250,6 +250,27 @@ https://runebook.dev
 
 
 
+15.
+Juliaで見る漸近理論 (確率変数でない数列の収束) + Real Analysis (Convergence & Bounded Series)
+https://zenn.dev/hessihan/articles/26144a5ffb932a
+
+
+INTRODUCTION TO THE CONVERGENCE OF SEQUENCES
+https://math.uchicago.edu/~may/REU2015/REUPapers/Lytle.pdf
+
+
+Convergent Sequences
+https://users.math.msu.edu/users/zhan/Notes1.pdf
+
+Math 320, Section 4: Analysis I
+https://users.math.msu.edu/users/zhan/MTH320.html
+
+
+Real Analysis Oral Exam study notes
+http://www.math.toronto.edu/mnica/oral/real_notes.pdf
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
