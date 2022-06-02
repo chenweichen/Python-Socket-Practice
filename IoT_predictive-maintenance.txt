@@ -1,0 +1,26 @@
+#IoT Predictive Maintenance
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+預測性維護
+https://docs.microsoft.com/zh-TW/azure/architecture/solution-ideas/articles/predictive-maintenance
+
+
+
+2.
+產業 IoT 的預測性維護
+https://docs.microsoft.com/zh-TW/azure/architecture/solution-ideas/articles/iot-predictive-maintenance
+
+本文示範終端製造商如何使用 OPC UA (開放平臺通訊整合架構) 和產業元件，將資產連線到雲端。 
+雖然藉由優化生產環境來降低成本，但這可讓使用預測性維護來提升機器的效率。 藉由將進階分析和機器學習套用至您的生產環境來預測中斷，以減輕中斷。 
+使用由製造資料觸發的豐富見解和自動警示，確保生產執行時間。
+
+OPC UA 是平臺獨立且服務導向的互通性標準，適用于安全且可靠的資料交換。 
+OPC UA 由各種工業系統和裝置使用，例如產業 PC、PLC 和感應器。 這是 OPC Foundation 所驅動的標準。
+
+
+
