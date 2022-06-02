@@ -166,6 +166,27 @@ https://discourse.julialang.org/t/confused-about-logging/34945
 
 
 
+12.
+Recent Criticisms of Julia
+https://www.jesseperla.com/post/julia-criticism/
+
+
+
+13.
+Packages, Testing, and Continuous Integration
+https://julia.quantecon.org/software_engineering/testing.html
+
+
+
+14.
+A Grab Bag of Data Sources
+https://www.jesseperla.com/post/data-sources/
+
+
+
+15.
+ECON 408: Computational and Quantitative Macroeconomics
+https://www.jesseperla.com/post/computational-macro/
 
 
 
