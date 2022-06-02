@@ -1,0 +1,80 @@
+# FANUC Issues 
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+HOW TO COLLECT DATA USING FANUC FOCAS (MACHINE DATA COLLECTION)
+https://support.machinemetrics.com/hc/en-us/articles/360020895854-How-to-Collect-Data-using-FANUC-FOCAS-Machine-Data-Collection-
+
+
+
+2.
+strangesast@gmail.com 
+https://observablehq.com/@strangesast
+
+
+https://github.com/strangesast
+
+
+Fanuc Minimal Communication Example
+https://github.com/strangesast/fanuc-minimal-example
+
+
+fanuc focas library compile & runtime files
+https://github.com/strangesast/fwlib
+
+
+a python wrapper for fwlib
+https://github.com/strangesast/pyfwlib
+
+
+fwlib and go
+https://github.com/strangesast/fwlib-go
+
+
+https://github.com/strangesast/fwlib/tree/e90f6a1ca5755a3d835306e9c0fe83372b4efebf/examples
+
+
+
+3.
+FANUC Series 0i-MF Plus
+https://www.fanucindia.com/diemouldprocedures.pdf
+
+
+FANUC Series 0i-MODEL F
+Series 0i-MODEL F具有與最佳機種Series 30i共同操作性、搭載了加工面品質提昇的技術
+https://www.fanuctaiwan.com.tw/product-sort-1.php?i=40
+
+https://www.fanuctaiwan.com.tw/upload/Product/F_201804161129fndD3l34.PDF
+
+
+FANUC Series 0i-MODEL F
+FANUC Series 0i-MODEL F has common operability with the upper 30i series, and technology has been implemented for achieving high quality in machining surfaces.
+https://www.fanuc.co.jp/en/product/cnc/fs_0i-f.html
+
+https://www.fanuc.co.jp/en/product/catalog/pdf/cnc/FS0i-F(E)-05a.pdf
+
+
+FANUC Series 0i-MODEL F Plus
+FANUC Series 0i-MODEL F Plus is a succession CNC of Series 0i-MODEL F with renewed design, enhanced basic functions and the pursuit of ease of use.
+It is equipped with the latest control technology for fine surface machining and reducing cycle time, and with customizable functions that can flexibly create screens suitable for machine tools.
+https://www.fanuc.co.jp/en/product/cnc/fs_0i-fplus.html
+
+https://www.fanuc.co.jp/en/product/catalog/pdf/cnc/FS0i-F_Plus(E)-02.pdf
+
+https://www.fanuc.co.jp/en/product/catalog/pdf/cnc/FS0i-F_Plus(C)-02.pdf
+
+
+
+4.
+FWLIB32 | GENERAL
+FOCAS1 / FOCAS2
+CNC/PMC Data window library
+FOCAS1/2 : FANUC Open CNC API Specifications version 1 or 2
+https://www.inventcom.net/fanuc-focas-library/general/fwlib32
+
+
+
