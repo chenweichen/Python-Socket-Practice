@@ -1,0 +1,39 @@
+# Julia with embedded system  
+
+## No.:
+## Title:
+## https links: 
+
+1.
+Bring Julia code to embedded hardware (ARM)
+https://discourse.julialang.org/t/bring-julia-code-to-embedded-hardware-arm/19979
+
+
+
+2.
+Running Julia baremetal on an Arduino
+https://seelengrab.github.io/articles/Running%20Julia%20baremetal%20on%20an%20Arduino/
+
+
+
+3.
+Julia programming on a Raspberry Pi
+https://funprojects.blog/2022/01/02/julia-programming-on-a-raspberry-pi/
+
+
+
+4.
+Microcontroller Programming with Arduino and Julia
+https://static.fossee.in/floss-arduino/manuals/fossee-scilab-arduino/julia.pdf
+
+
+
+5.
+Running Julia bare-metal on an Arduino (seelengrab.github.io)
+
+https://brianlovin.com/hn/31481895
+
+
+https://news.ycombinator.com/item?id=31481895
+
+
