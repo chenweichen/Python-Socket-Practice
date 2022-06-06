@@ -271,6 +271,59 @@ http://www.math.toronto.edu/mnica/oral/real_notes.pdf
 
 
 
+16.
+Julia lang Garbage Collection
+
+How much do collections of allocated objects cost?
+https://bkamins.github.io/julialang/2021/06/11/vecvec.html
+
+
+Julia gc.c 
+https://github.com/JuliaLang/julia/blob/master/src/gc.c
+
+
+On the garbage collection
+https://discourse.julialang.org/t/on-the-garbage-collection/35695
+
+https://discourse.julialang.org/t/on-the-garbage-collection/35695/8
+
+
+Details about Julia’s Garbage Collector, Reference Counting?
+https://discourse.julialang.org/t/details-about-julias-garbage-collector-reference-counting/18021/3
+
+
+17.
+Julia Learning Circle: JIT and Method Invalidations 
+https://wesselb.github.io/2020/11/07/julia-learning-circle-meeting-1.html
+
+
+
+18.
+Solutionf For Hihg-Dimensional Statistics 
+https://wesselb.github.io/2020/08/21/high-dimensional-statistics.html
+
+
+High-Dimensional Statistics A Non-Asymptotic Viewpoint - Martin J. Wainwright, University of California, Berkeley
+https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DAB53E9FF8757C7A4E
+
+DOI:https://doi.org/10.1017/9781108627771
+
+https://high-dimensional-statistics.github.io
+
+https://www.cambridge.org/core/services/aop-cambridge-core/content/view/30AF7B572184787F4C99715838549721/9781108498029c2_21-57.pdf/basic_tail_and_concentration_bounds.pdf
+
+
+
+19.
+Julia Learning Circle: Memoty Allocations And Garbage Collection 
+https://wesselb.github.io/2020/11/23/julia-learning-circle-meeting-2.html
+
+
+Julia Learning Circle: Generated Functins 
+https://wesselb.github.io/2020/12/13/julia-learning-circle-meeting-3.html
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
