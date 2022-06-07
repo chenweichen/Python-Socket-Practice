@@ -50,3 +50,74 @@ This package contains a Python implementation of Rolling Conformal Inference (Ro
 for constructing distribution-free prediction sets.
 
 
+
+3.
+Practical Adversarial Multivalid Conformal Prediction
+https://arxiv.org/abs/2206.01067
+
+https://arxiv.org/pdf/2206.01067
+
+We give a simple, generic conformal prediction method for sequential prediction that 
+achieves target empirical coverage guarantees against adversarially chosen data. 
+It is computationally lightweight -- comparable to split conformal prediction -- but 
+does not require having a held-out validation set, and so all data can be used for training models 
+from which to derive a conformal score. 
+It gives stronger than marginal coverage guarantees in two ways. 
+First, it gives threshold calibrated prediction sets that 
+have correct empirical coverage even conditional on the threshold 
+used to form the prediction set from the conformal score. 
+Second, the user can specify an arbitrary collection of subsets of 
+the feature space -- possibly intersecting -- and the coverage guarantees 
+also hold conditional on membership in each of these subsets. 
+We call our algorithm MVP, short for MultiValid Prediction. 
+We give both theory and an extensive set of empirical evaluations.
+
+
+
+4.
+Workshop on Distribution-Free Uncertainty Quantification
+Anastasios Angelopoulos · Stephen Bates · Sharon Li · Aaditya Ramdas · Ryan Tibshirani
+
+Visit https://sites.google.com/berkeley.edu/dfuq21/ for details!
+
+https://icml.cc/Conferences/2021/ScheduleMultitrack?event=8373
+
+
+5.
+ADVERSARIALLY ROBUST CONFORMAL PREDICTION
+Asaf Gendler , Tsui-Wei Weng , Luca Daniel , Yaniv Romano
+https://openreview.net/pdf?id=9L1BsI4wP1H
+
+
+
+6.
+Adaptive Conformal Predictions for Time Series
+Margaux Zaffran, Aymeric Dieuleveut, Olivier Féron, Yannig Goude, Julie Josse
+https://hal.archives-ouvertes.fr/hal-03573934/file/AdaptiveConformalPredictionsTimeSeries.pdf
+
+
+
+7.
+International Seminar on Distribution-Free Statistics Talk “Conformal Training: Learning Optimal Conformal Classifiers”
+https://davidstutz.de/international-seminar-on-distribution-free-statistics-talk-conformal-training-learning-optimal-conformal-classifiers/
+
+https://davidstutz.de/wordpress/wp-content/uploads/2021/11/conformal-training-isdfs2021.pdf
+
+Modern deep learning based classifiers show very high accuracy on test data 
+but this does not provide sufficient guarantees for safe deployment, especially in high-stake AI applications such as medical diagnosis. 
+Usually, predictions are obtained without a reliable uncertainty estimate or a formal guarantee. 
+Conformal prediction (CP) addresses these issues by using the classifier's probability estimates to predict confidence sets 
+containing the true class with a user-specified probability. 
+However, using CP as a separate processing step after training 
+prevents the underlying model from adapting to the prediction of confidence sets. 
+Thus, this paper explores strategies to differentiate through CP during training 
+with the goal of training model with the conformal wrapper end-to-end. 
+In our approach, conformal training (ConfTr), we specifically "simulate" conformalization on mini-batches during training. 
+We show that ConfTr outperforms state-of-the-art CP methods for classification 
+by reducing the average confidence set size (inefficiency). 
+Moreover, it allows to "shape" the confidence sets predicted at test time, which is difficult for standard CP. 
+On experiments with several datasets, we show ConfTr can influence how inefficiency is distributed across classes, 
+or guide the composition of confidence sets in terms of the included classes, while retaining the guarantees offered by CP.
+
+
+
