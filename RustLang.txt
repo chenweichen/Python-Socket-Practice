@@ -123,3 +123,15 @@ http://julio.meroh.net/
 http://songtianyi.info/pages/programming/programming-languages/is-rust-garbage-collected.html
 
 
+
+14.
+The Rust Programming Language
+https://doc.rust-lang.org/book/
+
+
+
+15.
+The Embedded Rust Book
+https://docs.rust-embedded.org/book/
+
+
