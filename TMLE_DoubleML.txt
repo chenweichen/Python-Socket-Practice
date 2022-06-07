@@ -303,3 +303,10 @@ An Easy Implementation of CV-TMLE
 https://arxiv.org/abs/1811.04573
 
 
+
+21.
+R Guide for TMLE in Medical Research - Ehsan Karim & Hanna Frank
+2021-08-24
+https://ehsanx.github.io/TMLEworkshop/
+
+
