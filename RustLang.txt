@@ -135,3 +135,10 @@ The Embedded Rust Book
 https://docs.rust-embedded.org/book/
 
 
+
+16.
+Rust 程式設計語言
+https://rust-lang.tw/book-tw/
+
+
+
