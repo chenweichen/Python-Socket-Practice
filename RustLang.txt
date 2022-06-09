@@ -142,3 +142,37 @@ https://rust-lang.tw/book-tw/
 
 
 
+17.
+翻譯：Rust 與記憶體
+https://rfns.io/blog/tech/2021-06-30-rust-and-the-machine
+
+Rust &TheMachine
+https://medium.com/@orbitalK/why-the-machine-b9803a77fa29
+
+
+
+18.
+Target Tier Policy
+https://doc.rust-lang.org/rustc/target-tier-policy.html
+
+
+Platform Support
+https://doc.rust-lang.org/rustc/platform-support.html
+
+
+平台支援
+https://askeing.github.io/rust-book/getting-started.html
+
+
+
+19.
+LLVM基础设施和Rust
+https://www.ttalk.im/2021/12/llvm-infrastructure-and-rust.html
+
+该篇博文重点介绍了LLVM这个编译器框架的一些基本知识，以及RUST如何生成LLVM IR，以及LLVM是怎么进行代码分析和优化的
+
+
+LLVM Infrastructure and Rust
+https://www.bexxmodd.com/log/llvm-infrastrucutre-and-rust/7
+
+
