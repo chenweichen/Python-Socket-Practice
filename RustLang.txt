@@ -176,3 +176,27 @@ LLVM Infrastructure and Rust
 https://www.bexxmodd.com/log/llvm-infrastrucutre-and-rust/7
 
 
+
+20.
+Compile Rust for Raspberry Pi ARM
+https://medium.com/swlh/compiling-rust-for-raspberry-pi-arm-922b55dbb050
+
+
+
+21.
+Cross-compilation using Clang
+https://clang.llvm.org/docs/CrossCompilation.html
+
+The triple has the general format <arch><sub>-<vendor>-<sys>-<abi>, where:
+arch = x86_64, i386, arm, thumb, mips, etc.
+sub = for ex. on ARM: v5, v6m, v7a, v7m, etc.
+vendor = pc, apple, nvidia, ibm, etc.
+sys = none, linux, win32, darwin, cuda, etc.
+abi = eabi, gnu, android, macho, elf, etc.
+The sub-architecture options are available for their own architectures, of course, so “x86v7a” doesn’t make sense. The vendor needs to be specified only if there’s a relevant change, for instance between PC and Apple. Most of the time it can be omitted (and Unknown) will be assumed, which sets the defaults for the specified architecture. The system name is generally the OS (linux, darwin), but could be special like the bare-metal “none”.
+
+When a parameter is not important, it can be omitted, or you can choose unknown and the defaults will be used. If you choose a parameter that Clang doesn’t know, like blerg, it’ll ignore and assume unknown, which is not always desired, so be careful.
+
+Finally, the ABI option is something that will pick default CPU/FPU, define the specific behaviour of your code (PCS, extensions), and also choose the correct library calls, etc.
+
+
