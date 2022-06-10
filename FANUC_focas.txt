@@ -78,3 +78,6 @@ https://www.inventcom.net/fanuc-focas-library/general/fwlib32
 
 
 
+5.
+Handler Issues Applying cdll in Python
+https://stackoverflow.com/questions/41675881/handler-issues-applying-cdll-in-python
