@@ -335,6 +335,24 @@ https://wesselb.github.io/2020/12/13/julia-learning-circle-meeting-3.html
 
 
 
+20.
+JuliaNotes.jl
+https://m3g.github.io/JuliaNotes.jl/stable/memory/
+
+
+Vector{Int} <: Vector{Real} is false??
+https://m3g.github.io/JuliaNotes.jl/stable/typevariance/
+
+
+Assignment and mutation
+https://m3g.github.io/JuliaNotes.jl/stable/assignment/
+
+
+Workflows for developing effectivelly in Julia
+https://m3g.github.io/JuliaNotes.jl/stable/workflow/
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
