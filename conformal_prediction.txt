@@ -121,3 +121,102 @@ or guide the composition of confidence sets in terms of the included classes, wh
 
 
 
+8.
+Valid prediction intervals for regression problems
+https://paperswithcode.com/paper/well-calibrated-prediction-intervals-for
+
+
+https://arxiv.org/abs/2107.00363
+
+
+https://github.com/nmdwolf/ValidPredictionIntervals
+
+
+
+9.
+Distribution-Free Predictive Inference for Regression
+https://www.stat.cmu.edu/~ryantibs/papers/conformal.pdf
+
+
+
+10.
+Conformal Prediction Under Covariate Shift
+https://www.stat.cmu.edu/~ryantibs/papers/weightedcp.pdf
+
+
+
+11.
+Conformal prediction for exponential families and generalized linear models
+https://cpb-us-w2.wpmucdn.com/campuspress.yale.edu/dist/5/2398/files/2019/05/conformalglmwebversion.pdf
+
+
+
+12.
+Reliable Predictions? Counterfactual Predictions?
+Equitable Treatment?
+Some Recent Progress in Predictive Inference
+https://iacs.seas.harvard.edu/files/iacs2/files/emmanuel_candes_seminar_slides.pdf
+
+
+
+13.
+Conformal Bayesian Computation
+https://proceedings.neurips.cc/paper/2021/file/97785e0500ad16c18574c64189ccf4b4-Paper.pdf
+
+
+
+14.
+Conformal Prediction
+https://www.stat.cmu.edu/~larry/=sml/Conformal
+
+
+
+15.
+Conformal Inference R Project Maintained by Ryan Tibshirani
+Based on work by Rina Barber, 
+Emmanuel Candes, 
+Max G'Sell, 
+Jing Lei, 
+Aaditya Ramdas, 
+Alessandro Rinaldo, 
+Ryan Tibshirani, 
+Larry Wasserman
+https://github.com/ryantibs/conformal
+
+
+
+16.
+Conformal Inference Tutorial - Cyrus Samii (cds2083@nyu.edu)
+https://cdsamii.github.io/cds-demos/conformal/conformal-tutorial.html
+
+
+
+17.
+A Guideline to Conformal Prediction
+https://medium.com/analytics-vidhya/a-guideline-to-conformal-prediction-7a392fc29bc1
+
+
+Python Packages:
+Conformal Prediction add-on in Orange 3 (Version 1.1.3, May 2019)
+https://pypi.org/project/Orange3-Conformal/
+
+Henrik Linusson, nonconformist (Version 2.1.0, June 2017)
+https://pypi.org/project/nonconformist/
+
+https://github.com/donlnz/nonconformist
+
+http://donlnz.github.io/nonconformist/
+
+R packages:
+Carnegie Mellon Conformal Inference Team (Max G’Sell, Jing Lei, Alessandro Rinaldo, Ryan Tibshirani, and Larry Wasserman), conformalInference (Version 1.0.0, June 2018)
+https://github.com/ryantibs/conformal/
+
+Niharika Gauraha and Ola Spjuth, conformalClassification (Version 1.0.0, December 2017)
+https://cran.r-project.org/web/packages/conformalClassification/
+
+Resources:
+http://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf
+
+https://cml.rhul.ac.uk/copa2017/presentations/CP_Tutorial_2017.pdf
+
+
