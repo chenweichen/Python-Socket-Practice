@@ -1,0 +1,180 @@
+# Title: Data interface CNC machine with Raspberry Pi using Focas
+
+# Link: https://levelup.gitconnected.com/data-interface-cnc-machine-with-raspberry-pi-using-focas-8fbf0ae4848d
+
+# Author: Lars Kiefer
+# Github: https://github.com/larsKiefer
+
+In the age of Industry 4.0, access to data is more important than ever. 
+Direct acquiring of data from a CNC machine is often cumbersome due to the used PLC and NC control 
+technology and therefore requires in-depth knowledge in these areas. 
+Existing interfaces from manufacturers usually have to be enabled separately and are very expensive. 
+In this article, Focas and C++ programming are used to show how access to a CNC machine can be achieved.
+
+
+In summary, the goals of the article are:
+• Acquire CNC-data from Fanuc
+• Running Focas on Raspberry Pi, as a cheap operating system
+
+How to start?
+In the following the individual steps are shown, which are necessary, in order to get access to the CNC machine.
+
+
+1) Downloading library
+The Focas interface is downloadable free of charge after registration: https://www.inventcom.net/support/fanuc/universal-driver
+
+
+2) Linking of files
+The following commands must be executed on the Raspberry Pi for successful linking 
+and your libfwlib32.so.1.0.x should be copied to /usr/local/lib in advance.
+
+"""
+sudo ldconfig
+sudo ln –s /usr/local/lib/libfwlib32.so.1.0.x /usr/local/lib/libfwlib32.so
+"""
+
+
+3) Setup c++ Code
+After the basic installation is completed, you can now start programming. 
+It is important to note that all Focas commands must be declared separately.
+
+"""
+#include <string>
+#include <stdexcept>
+#include <filesystem>
+#include <fstream>
+#include <map>
+
+#include <iostream>
+#include "fwlib32.h"
+#include <dlfcn.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <istream>
+#include <stdexcept>
+#include <sstream> 
+
+using namespace std;
+
+//integrating of command from focas libary
+//connecting with Fanuc
+typedef short(*Fcnc_allclibhndl3)(const char *, unsigned short, long, unsigned short *);
+static Fcnc_allclibhndl3 pcnc_allclibhndl3;
+//reading axes position
+typedef short(*Fcnc_rdposition)(unsigned short, short , short*, ODBPOS*);
+static Fcnc_rdposition pcnc_rdposition;
+//free up libary
+typedef short(*Fcnc_freelibhndl)(unsigned short);
+static Fcnc_freelibhndl pcnc_freelibhndl;
+//start using Fanuc under Linux
+typedef short(*Fcnc_startupprocess)(long , string);
+static Fcnc_startupprocess pcnc_startupprocess;
+//end process
+typedef short(*Fcnc_exitthread)();
+typedef short(*Fcnc_exitprocess)();
+typedef short(*Fcnc_freelibhndl)(unsigned short);
+static Fcnc_freelibhndl pcnc_freelibhndl;
+Fcnc_exitthread pcnc_exitthread;
+Fcnc_exitprocess pcnc_exitprocess;
+
+static unsigned short handle = 0;
+"""
+
+
+4) Loading of the library in C++
+In the next step, the library dynamic is loaded and the previously declared commands are initialized.
+
+
+"""
+int main()
+{
+    void *hDll;
+    hDll = dlopen("/usr/local/lib/libfwlib32.so", RTLD_LAZY);
+
+    if (!hDll) {
+        /* fail to load the library */      
+        string message = "Error: ";
+        stringstream myStreamString;
+        myStreamString << dlerror();
+        string myString = message+myStreamString.str();
+        
+        throw runtime_error(myString.c_str());
+    }
+    
+    pcnc_allclibhndl3 = (Fcnc_allclibhndl3)dlsym(hDll, "cnc_allclibhndl3");
+    pcnc_startupprocess = (Fcnc_startupprocess)dlsym(hDll, "cnc_startupprocess");
+    pcnc_freelibhndl = (Fcnc_freelibhndl)dlsym(hDll, "cnc_freelibhndl");
+    pcnc_rdposition = (Fcnc_rdposition)dlsym(hDll, "cnc_rdposition");
+    pcnc_exitthread = (Fcnc_exitthread)dlsym(hDll, "cnc_exitthread");
+    pcnc_exitprocess = (Fcnc_exitprocess)dlsym(hDll, "cnc_exitprocess");
+    pcnc_freelibhndl = (Fcnc_freelibhndl)dlsym(hDll, "cnc_freelibhndl");
+
+"""
+
+
+5) Connecting to Fanuc
+The following lines are used to establish the connection between Fanuc and Raspberry Pi
+
+"""
+if (pcnc_startupprocess(0, "focas.log") != EW_OK) {
+      string message = "Failed to create required log file!\n";
+      throw runtime_error(message.c_str());
+  }
+const char* ip = "192.168.1.10";
+auto result = this->pcnc_allclibhndl3(ip, 8193, 20, &handle);
+"""
+
+
+6) Get axes data
+From now on, all commands can be executed so that bytes can be read and written. 
+In this example, the current axis positions are queried.
+
+"""
+int allocated = 0;
+
+ODBPOS pos[MAX_AXIS];
+short num = MAX_AXIS;
+
+double* returnarray = new double[MAX_AXIS];
+
+short ret1 = this->pcnc_rdposition(handle, 0, &num, pos);
+
+if (!ret1) {
+    int i;
+    for (i = 0; i < num; i++) {
+
+        returnarray[i] = pos[i].abs.data;
+        returnarray[i] = this->transformFanucRealToDouble(returnarray[i]);
+
+    }
+}
+"""
+
+
+7) Close connection
+After the request is finished, the connection should be closed again and the library loading will be reset.
+
+
+"""
+pcnc_freelibhndl(handle);
+pcnc_exitthread( );
+pcnc_exitprocess( );        
+handle = 0;
+dlclose(hDll);
+"""
+
+
+
+Conclusion
+Thanks for reading. If you have anything to add, please feel free to leave a comment!
+
+This article focuses on the initial creation of access. 
+Further developments offer the possibility of the integration of CMake and the linking to Python.
+To summarize this article, with a little programming effort, one can get the possibility to 
+write and read data on a CNC-machine using inexpensive hardware.
+
+Notes: The setup also works under Linux and Windows. The steps of the setup vary slightly.
+
+
