@@ -81,3 +81,29 @@ https://www.inventcom.net/fanuc-focas-library/general/fwlib32
 5.
 Handler Issues Applying cdll in Python
 https://stackoverflow.com/questions/41675881/handler-issues-applying-cdll-in-python
+
+
+
+6.
+RoboDK API
+https://robodk.com/doc/en/RoboDK-API.html#RoboDKAPI
+
+The RoboDK API (Application Program Interface) is a set of routines and commands that RoboDK exposes through a programming language. The RoboDK API allows you to program any robot using one of the supported programming languages, such as C#, Python or C++. You can also automate repetitive tasks using the RoboDK API.
+
+Compared to vendor-specific robot programming, with the RoboDK API it is possible to simulate and program any robot using a unique/universal programming language, such as Python. The following page provides an overview and a video showing offline programming with the API.
+
+The RoboDK API is available for Python, C#, C, C++, Visual Basic (.NET) and Matlab. Any of these programming languages can be used to simulate and program any robot arm.
+
+
+
+7.
+yaskawa
+https://github.com/topics/yaskawa
+
+
+
+8.
+A Python library for controlling Yaskawa MOTOMAN robots.
+https://github.com/ra-mtp-ntnu/moto
+
+
