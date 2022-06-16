@@ -220,3 +220,10 @@ http://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf
 https://cml.rhul.ac.uk/copa2017/presentations/CP_Tutorial_2017.pdf
 
 
+
+18.
+STAT 991: Topics In Modern Statistical Learning (UPenn, 2022 Spring)
+https://github.com/dobriban/Topics-In-Modern-Statistical-Learning
+
+https://drive.google.com/file/d/1VmkAAGOYCTORq1wxSQqy255qLJjTNvBI/view
+
