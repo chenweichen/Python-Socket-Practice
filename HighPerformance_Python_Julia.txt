@@ -353,6 +353,44 @@ https://m3g.github.io/JuliaNotes.jl/stable/workflow/
 
 
 
+21.
+Julia v1.8 Release Notes
+https://github.com/JuliaLang/julia/blob/master/HISTORY.md#julia-v18-release-notes
+
+Compiler/Runtime improvements
+
+21-1. libjulia-codegen
+The LLVM-based compiler has been separated from the run-time library into a new library, libjulia-codegen. It is loaded by default, so normal usage should see no changes. In deployments that do not need the compiler (e.g. system images where all needed code is precompiled), this library (and its LLVM dependency) can simply be excluded (#41936).
+https://github.com/JuliaLang/julia/issues/41936
+
+Unreasonably large executable size from create_app #660
+https://github.com/JuliaLang/PackageCompiler.jl/issues/660
+
+This is expected. Julia currently has no good way to run code without these supporting libraries. But there is work in progress of trying to improve this.
+
+
+21-2. Base.@assume_effects macro
+Inference now tracks various effects such as side-effectful-ness and nothrow-ness on a per-specialization basis. Code heavily dependent on constant propagation should see significant compile-time performance improvements and certain cases (e.g. calls to uninlinable functions that are nevertheless effect free) should see runtime performance improvements. Effects may be overwritten manually with the Base.@assume_effects macro (#43852).
+https://github.com/JuliaLang/julia/issues/43852
+
+https://github.com/JuliaLang/julia/commit/ef4220533d4a9a887b199362e37de0e056c1a458
+
+improve concrete-foldability of core math functions #45613
+https://github.com/JuliaLang/julia/pull/45613
+
+Matrix{Int} \ Vector{Float32} is type-unstable #45696
+https://github.com/JuliaLang/julia/issues/45696
+
+Linear system solve promotes Float32 to Float64 #1041
+https://github.com/JuliaArrays/StaticArrays.jl/issues/1041
+
+
+21-3.
+Bootstrapping time has been improved by about 25% (#41794).
+https://github.com/JuliaLang/julia/issues/41794
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
