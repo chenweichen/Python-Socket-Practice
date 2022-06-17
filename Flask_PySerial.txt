@@ -1,0 +1,191 @@
+
+
+1.
+Week 12: Application Programming
+http://fab.cba.mit.edu/classes/863.14/people/juliana_nazare/project12.html
+
+This week, I made a web interface to control my Fabduino. The interface allowed me to taggle the onboard LED on and off from the web. To do this, I used PySerial and Python’s web microframework, Flask.
+
+First, I created the Arduino code to make the Arduino listen for input over serial. The code (shown below) listens for a ‘1’ or a ‘0’ char to be sent over the serial. If it recieves a ‘1’, it turns the LED on by setting to voltage to HIGH. If it recives a ‘0’, it turns the LED off by setting the voltage to LOW.
+
+toggle.ino
+
+void setup() {
+  Serial.begin(9600); // Set the baud rate
+  pinMode(13, OUTPUT); // Set the onboard LED to output
+  Serial.println("Ready");
+}
+void loop() {
+  char toggle = ' ';
+  if(Serial.available()){ // Only send data back if data has been sent
+    char toggle = Serial.read(); // Read the incoming data
+    if(toggle == '1'){
+      digitalWrite(13, HIGH);   // Turn the LED on (HIGH is the voltage level)     
+    }
+    if(toggle == '0'){
+      digitalWrite(13, LOW);	// Turn the LED off (LOW is the voltage level)    
+    }
+  }
+  delay(100); // delay for 1/10 of a second
+}
+
+
+Next, I created the Python code to send the ‘1’ or ‘0’ to the serial. I used Flask to make a simple (2 button) webpage that, when clicked, submitted a post request with either the value ‘ON’ or ‘OFF’ to the application.
+
+toggle.py
+
+import serial
+from time import sleep
+from flask import request
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/", methods = ['POST', 'GET'])
+def hello():
+	if request.method == 'POST':
+		print request.form['submit']
+		ser = serial.Serial('/dev/tty.usbserial-FTGS552S', 9600, timeout=1)
+		if request.form['submit'] == 'ON':
+			print '1'
+			ser.write('1')
+		elif request.form['submit'] == 'OFF':
+			print '0'
+			ser.write('0')
+		else:
+			pass # unknown
+	return '<form action="/" method="POST"><input type="submit" name="submit" value="ON"><input type="submit" name="submit" value="OFF"></form>'
+
+if __name__ == "__main__":
+	app.run()
+
+
+To run the program, first load the toggle.ino code onto the Fabduino. Next, run the python code using ‘python toggle.py’ and open up http://localhost:5000. Clicking the buttons on the screen turns the on-board LED on and off (:
+
+"""
+ser = serial.Serial('/dev/tty.usbserial-FTGS552S', 9600, timeout=1)
+"""
+
+
+
+2.
+简易Python上位机之LED控制
+https://segmentfault.com/a/1190000022704635
+
+"""
+ser = serial.Serial('COm10',115200,timeout=0.5) #打开指定串口
+"""
+
+
+3.
+使用Python的pySerial模組進行序列通訊：連接電腦與Arduino和MicroPython
+https://swf.com.tw/?p=1188
+
+連接ESP8266控制板和電腦的方式有兩種：
+
+Wi-Fi無線網路：把ESP8266當作感測器網路前端設備，傳送資料到網站伺服器；或者當作網站伺服器，提供API讓前端網頁取得感測數據。
+序列通訊埠：透過USB序列埠跟電腦或者手機連線。
+
+
+"""
+接著使用WebREPL連線到D1 mini板，透過import ser_test執行序列通訊測試程式，相關操作說明請參閱《超圖解 Python 物聯網實作入門》第七章「序列埠通信」7-21頁。
+"""
+
+
+4.
+pySerial
+https://pythonhosted.org/pyserial/shortintro.html#opening-serial-ports
+
+
+PyModbus - A Python Modbus Stack
+https://pymodbus.readthedocs.io/en/latest/readme.html
+
+
+
+5.
+工业数据采集：Python通过Modbus 读取RS232，RS485数据
+https://zhuanlan.zhihu.com/p/310544320
+
+ModBUS又分为
+Modbus RTU，ASCII：所有物理接口都是串行（Serial）通信口：RS232，RS422，RS485
+Modbus TCP：接口是以太网口，也就是电脑上的网络口，用Ethernet或者internet来连接
+
+
+工业数据采集：Python从OPC读、写设备实时数据so easy
+https://zhuanlan.zhihu.com/p/295154634
+
+
+工业数据采集：传感器+树莓派+网站完整实现设备实时数据可视化
+https://zhuanlan.zhihu.com/p/270196679
+
+
+工业4.0的理解和落地实施-工业数据采集
+https://zhuanlan.zhihu.com/p/162724007
+
+
+
+6.
+以 Python 利用 pyModbusTCP 庫對 MODBUS TCP Server 資料進行搬移或運算
+https://www.icdt.com.tw/main/index.php/2013-07-09-05-19-03/229-pymodbustcp-share
+
+
+
+7.
+开源一个c#上位机源码吧——串口调试助手
+https://zhuanlan.zhihu.com/p/37437015
+
+上位机是指可以直接发出操控命令的计算机，一般是PC/host computer/master computer/upper computer,屏幕上显示各种信号变化（液压，水位，温度等）。下位机是直接控制设备获取设备状况的计算机，一般是PLC/单片机single chip microcomputer/slave computer/lower computer之类的。上位机发出的命令首先给下位机，下位机再根据此命令解释成相应时序信号直接控制相应设备。下位机不时读取设备状态数据（一般为模拟量），转换成数字信号反馈给上位机。简言之如此，实际情况千差万别，但万变不离其宗：上下位机都需要编程，都有专门的开发系统。
+
+
+
+8.
+UR機器人上位機通信-python版（一）
+https://www.twblogs.net/a/5edf44d173095c456693467b
+
+
+
+9.
+PLC, Arduino, and Raspberry Pi: What’s Right for Your Application?
+https://www.linkedin.com/pulse/plc-arduino-raspberry-pi-whats-right-your-application-ira-sharp-jr
+
+
+
+10.
+EVALUATING RASPBERRY PI AS A PROGRAMMABLE LOGIC CONTROLLER
+https://hackaday.com/2020/08/24/evaluating-raspberry-pi-as-a-programmable-logic-controller/
+
+
+
+11.
+Model-based control: Raspberry Pi vs programmable logic controllers
+https://www.controlglobal.com/articles/2020/raspberry-pi-vs-plc-for-model-based-control/
+
+
+
+12.
+ROS.org 
+http://wiki.ros.org/motoman
+
+http://wiki.ros.org/motoman_driver
+
+https://www.motoman.com/en-us/about/y-blog/ros-enabled-ready-to-go
+
+
+
+13.
+Python modbus communcation reading words on Mitsubishi PLC using ModbusTcpClient library
+https://stackoverflow.com/questions/43344968/python-modbus-communcation-reading-words-on-mitsubishi-plc-using-modbustcpclient
+
+
+
+14.
+MicroPython How To
+https://github.com/maloyang/MicroPython-How-To/blob/master/MicroPython%20How%20to.ipynb
+
+
+PLC & Python
+https://github.com/maloyang/PLC-Python
+
+
+Python工業4.0 - 工廠監控系統
+https://github.com/maloyang/TCPY20180922_Python-industry-IoT
