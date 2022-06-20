@@ -391,6 +391,23 @@ https://github.com/JuliaLang/julia/issues/41794
 
 
 
+22.
+ENGR108: Introduction to Matrix Methods (Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares)
+https://stanford.edu/class/engr108/
+
+I just want to know how to get inverse matrix as using Julialang 
+https://stanford.edu/class/engr108/lectures/julia_inverses_slides.pdf
+
+https://stanford.edu/class/engr108/lectures/
+
+https://stanford.edu/class/engr108/lectures/julia_least_squares_slides.pdf
+
+https://stanford.edu/class/engr108/lectures/julia_vectors_slides.pdf
+
+https://stanford.edu/class/engr108/lectures/julia_matrices_slides.pdf
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
