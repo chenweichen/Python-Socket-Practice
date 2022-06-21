@@ -408,6 +408,98 @@ https://stanford.edu/class/engr108/lectures/julia_matrices_slides.pdf
 
 
 
+23.
+Language introspection
+https://juliateachingctu.github.io/Scientific-Programming-in-Julia/dev/lecture_06/lecture/
+
+JuliaTeachingCTU/ Scientific-Programming-in-Julia
+https://github.com/JuliaTeachingCTU/Scientific-Programming-in-Julia/blob/master/docs/src/index.md#
+
+This repository contains all the course materials for the master course Scientific Programming in Julia 
+taught at the Czech Techincal University in Prague. 
+You can find more information on the official course website.
+
+https://juliateachingctu.github.io/Scientific-Programming-in-Julia/stable/
+
+
+
+Stages of compilation
+Julia (as any modern compiler) uses several stages to convert source code to native code. Let's recap them
+
+parsing the source code to abstract syntax tree (AST)
+lowering the abstract syntax tree static single assignment form (SSA) see wiki
+assigning types to variables and performing type inference on called functions
+lowering the typed code to LLVM intermediate representation (LLVM Ir)
+using LLVM compiler to produce a native code.
+
+function nextfib(n)
+    a, b = one(n), one(n)
+    while b < n 
+        a, b = b, a + b 
+    end
+    return b 
+end
+
+Meta.parse(
+    """ function nextfib(n)
+            a, b = nextfib(n)
+            while b < n 
+                a, b = b, a + b 
+            end
+            return b 
+        end   
+    """)
+
+# For inserted debugging information, there is an option to pass keyword argument debuginfo=:source.
+@code_lowered debuginfo=:source nextfib(3)
+@code_lowered nextfib(3)
+
+
+@code_typed nextfib(3)
+@code_warntype nextfib(3)
+
+
+@code_llvm debuginfo=:source nextfib(3)
+@code_llvm nextfib(3)
+
+@code_native debuginfo=:source nextfib(3)
+@code_native nextfib(3)
+
+@time 
+@allocated 
+@which 
+
+using BenchmarkTools 
+@btime 
+
+
+
+24.
+JuliaTeachingCTU/ Julia-for-Optimization-and-Learning
+https://github.com/JuliaTeachingCTU/Julia-for-Optimization-and-Learning
+
+https://github.com/JuliaTeachingCTU/Julia-for-Optimization-and-Learning/tree/master/docs/src
+
+https://juliateachingctu.github.io/Julia-for-Optimization-and-Learning/stable/
+
+What will we emphasize?
+The main goals of the course are the following:
+
+You will learn the connections between theory and coding. There are many lectures which teach either only theory or only coding. We will show you both.
+You will learn how to code efficiently. We will teach you to split the code into small parts which are simpler to debug or optimize. We will often show you several writing possibilities and comment on the differences.
+You will learn about machine learning and neural networks. You will understand neural networks by writing a simple one from scratch. Then you will learn how to use packages to write simple code for complicated networks.
+You will learn independence. The problem formulation of many exercises is very general, which simulates when no step-by-step procedure is provided.
+
+
+Tyeps system and generic programming 
+https://juliateachingctu.github.io/Julia-for-Optimization-and-Learning/stable/lecture_06/compositetypes/
+
+
+Optimization 
+https://juliateachingctu.github.io/Julia-for-Optimization-and-Learning/stable/lecture_08/theory/
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
