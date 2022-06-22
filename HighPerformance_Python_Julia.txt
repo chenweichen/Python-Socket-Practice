@@ -511,6 +511,8 @@ Parallelization
 https://enccs.github.io/Julia-for-HPC/parallelization/
 
 
+Julia for Economists - Parallelization for Fun and Profit - Cameron Pfiffer (cpfiffer@stanford.edu)
+https://github.com/cpfiffer/julia-bootcamp-2022/blob/main/session-2/parallelization-lecture.ipynb
 
 
 
@@ -570,10 +572,6 @@ Folds.jl provides a unified interface for sequential, threaded, and distributed 
 https://discourse.julialang.org/t/ann-folds-jl-threaded-distributed-and-gpu-based-high-level-data-parallel-interface-for-julia/54701
 
 
-Julia for Economists - Parallelization for Fun and Profit - Cameron Pfiffer (cpfiffer@stanford.edu)
-https://github.com/cpfiffer/julia-bootcamp-2022/blob/main/session-2/parallelization-lecture.ipynb
-
-
 https://github.com/JuliaFolds/FLoops.jl
 FLoops.jl provides a macro @floop. It can be used to generate a fast generic sequential and parallel iteration over complex collections.
 
@@ -597,6 +595,32 @@ https://juliafolds.github.io/data-parallelism/tutorials/quick-introduction/
 
 
 https://juliafolds.github.io/Transducers.jl/dev/
+
+
+
+26.
+educational materials for MIT math courses
+https://github.com/mitmath
+
+
+MIT IAP short course: Matrix Calculus for Machine Learning and Beyond
+https://github.com/mitmath/matrixcalc
+
+
+18.330 Introduction to Numerical Analysis
+https://github.com/mitmath/18330
+
+
+18.335 - Introduction to Numerical Methods course
+https://github.com/mitmath/18335
+
+
+18.337J/6.338J: Parallel Computing and Scientific Machine Learning
+https://github.com/mitmath/18337
+
+
+18.S096 Special Subject in Mathematics: Applications of Scientific Machine Learning
+https://github.com/mitmath/18S096SciML
 
 
 
