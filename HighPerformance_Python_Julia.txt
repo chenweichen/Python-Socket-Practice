@@ -500,6 +500,106 @@ https://juliateachingctu.github.io/Julia-for-Optimization-and-Learning/stable/le
 
 
 
+25.
+Julia Parallel, Multithreading, Multiprocess 
+
+A quick introduction to data parallelism in Julia
+https://juliafolds.github.io/data-parallelism/tutorials/quick-introduction/
+
+
+Parallelization
+https://enccs.github.io/Julia-for-HPC/parallelization/
+
+
+
+
+
+https://github.com/JuliaParallel/Dagger.jl
+A framework for out-of-core and parallel computing
+
+At the core of Dagger.jl is a scheduler heavily inspired by Dask. 
+It can run computations represented as directed-acyclic-graphs (DAGs) efficiently on many Julia worker processes and threads, 
+as well as GPUs via DaggerGPU.jl.
+
+
+https://github.com/JuliaParallel/DTables.jl
+
+DTable – an early performance assessment of a new distributed table implementation
+https://julialang.org/blog/2021/12/dtable-performance-assessment/
+
+
+https://juliaparallel.org/Dagger.jl/stable/dtable/
+The DTable, or "distributed table", is an abstraction layer on top of Dagger that allows loading table-like structures into a distributed environment. 
+The main idea is that a Tables.jl-compatible source provided by the user gets partitioned into several parts and stored as Chunks. 
+These can then be distributed across worker processes by the scheduler as operations are performed on the containing DTable.
+
+
+https://github.com/JuliaParallel/DistributedArrays.jl
+Distributed arrays for Julia.
+
+DistributedArrays.jl uses the stdlib Distributed to implement a Global Array interface. 
+A DArray is distributed across a set of workers. 
+Each worker can read and write from its local portion of the array and each worker has read-only access to 
+the portions of the array held by other workers.
+
+
+https://github.com/JuliaParallel/MPI.jl
+This provides Julia interface to the Message Passing Interface (MPI), roughly inspired by mpi4py.
+
+"Julia at Scale" topic on the Julia Discourse
+https://discourse.julialang.org/c/domain/parallel/34
+
+
+https://github.com/JuliaParallel/Elemental.jl
+A package for dense and sparse distributed linear algebra and optimization. 
+The underlying functionality is provided by the C++ library Elemental written originally by Jack Poulson and now maintained by LLNL.
+
+
+A Julia interface to Apache Spark™
+http://dfdx.github.io/Spark.jl/dev/
+
+https://github.com/dfdx/Spark.jl
+
+https://spark.apache.org/downloads.html
+
+
+https://github.com/JuliaFolds/Folds.jl
+Folds.jl provides a unified interface for sequential, threaded, and distributed folds.
+
+[ANN] Folds.jl: threaded, distributed, and GPU-based high-level data-parallel interface for Julia
+https://discourse.julialang.org/t/ann-folds-jl-threaded-distributed-and-gpu-based-high-level-data-parallel-interface-for-julia/54701
+
+
+Julia for Economists - Parallelization for Fun and Profit - Cameron Pfiffer (cpfiffer@stanford.edu)
+https://github.com/cpfiffer/julia-bootcamp-2022/blob/main/session-2/parallelization-lecture.ipynb
+
+
+https://github.com/JuliaFolds/FLoops.jl
+FLoops.jl provides a macro @floop. It can be used to generate a fast generic sequential and parallel iteration over complex collections.
+
+
+https://github.com/JuliaFolds/ParallelMagics.jl
+ParallelMagics.jl is aiming at providing safe parallelism to Julia programmers such that
+"No-brainer" parallelism using compiler analysis; i.e., the code is parallelized only if the compiler guarantees the safety.
+
+
+https://github.com/JuliaFolds/FoldsCUDA.jl
+FoldsCUDA.jl provides Transducers.jl-compatible fold (reduce) implemented using CUDA.jl. 
+This brings the transducers and reducing function combinators implemented in Transducers.jl to GPU. 
+Furthermore, using FLoops.jl, you can write parallel for loops that run on GPU.
+
+
+https://github.com/JuliaFolds/Transducers.jl
+Transducers.jl provides composable algorithms on "sequence" of inputs. They are called transducers, first introduced in Clojure language by Rich Hickey.
+
+A quick introduction to data parallelism in Julia
+https://juliafolds.github.io/data-parallelism/tutorials/quick-introduction/
+
+
+https://juliafolds.github.io/Transducers.jl/dev/
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
