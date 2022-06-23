@@ -227,3 +227,40 @@ https://github.com/dobriban/Topics-In-Modern-Statistical-Learning
 
 https://drive.google.com/file/d/1VmkAAGOYCTORq1wxSQqy255qLJjTNvBI/view
 
+
+
+19.
+conformal predictive distribution
+
+
+Practical, Robust, and Equitable Uncertainty Estimation
+https://toc4fairness.org/practical-robust-and-equitable-uncertainty-estimation/
+
+
+Practical Adversarial Multivalid Conformal Prediction
+https://arxiv.org/abs/2206.01067
+
+MVP: Practical Adversarial Multivalid Conformal Prediction
+https://github.com/ProgBelarus/MultiValidPrediction
+
+
+Tutorial on Conformal Predictive Distributions - Paolo Toccaceli
+https://cml.rhul.ac.uk/people/ptocca/HomePage/COPA2020___Tutorial_on_Predictive_Distributions.pdf
+
+
+Cross-conformal predictive distributions
+https://proceedings.mlr.press/v91/vovk18a.html
+
+
+Conformal predictive distributions: an approach to nonparametric fiducial prediction
+http://alrw.net/articles/30.pdf
+
+
+Computationally efficient versions of conformal predictive distributions
+https://arxiv.org/abs/1911.00941
+
+
+Distribution-Free Predictive Inference for Regression
+https://www.stat.cmu.edu/~ryantibs/papers/conformal.pdf
+
+
