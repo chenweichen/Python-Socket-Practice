@@ -624,6 +624,20 @@ https://github.com/mitmath/18S096SciML
 
 
 
+19.
+Julia Transpose 
+https://github.com/mitmath/1806/blob/master/notes/Matrix-mult-perspectives.ipynb
+
+To get a row vector we must transpose the slice A[1,:]. In linear algebra, the transpose of a vector  is usually denoted 
+. In Julia, the transpose is x.'.
+
+If we omit the . and just write x' it is the complex-conjugate of the transpose, sometimes called the adjoint, often denoted 
+ (in matrix textbooks), 
+ (in pure math), or 
+ (in physics). For real-valued vectors (no complex numbers), the conjugate transpose is the same as the transpose, and correspondingly we usually just do x' for real vectors.
+ 
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
