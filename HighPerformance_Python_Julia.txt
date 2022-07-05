@@ -635,7 +635,17 @@ If we omit the . and just write x' it is the complex-conjugate of the transpose,
  (in matrix textbooks), 
  (in pure math), or 
  (in physics). For real-valued vectors (no complex numbers), the conjugate transpose is the same as the transpose, and correspondingly we usually just do x' for real vectors.
- 
+
+
+Revert "add 'ᵀ postfix operator for transpose (#38062)" #40075
+https://github.com/JuliaLang/julia/pull/40075
+
+This reverts commit 665279a.
+
+There has been some discussion about whether #38062 was such a good idea in hindsight (#40070, #38062 (comment)). 
+It might make sense to go back on this feature to give us some more time to think about it, before locking it in into 1.6.
+Fixes #40070
+
 
 
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
