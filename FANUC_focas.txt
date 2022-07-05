@@ -107,3 +107,113 @@ A Python library for controlling Yaskawa MOTOMAN robots.
 https://github.com/ra-mtp-ntnu/moto
 
 
+
+9.
+加载C库
+from ctypes import *
+facos = cdll.LoadLibrary('./libfwlib32.so.1')
+
+
+调用C库的格式如下,需要把变量类型转成C类型,指针传入需要调用addressof函数
+handler = c_short()
+res = facos.cnc_allclibhndl3(c_char_p(ip), c_ushort(port), c_long(timeout), addressof(self.handler))
+
+
+处理C语言结构体的时候,先定义一个Python数据结构,所有成员变量都必须用C类型
+class IODBPSD_U(Union):
+    _fields_ = [
+        ('cdata', c_char),
+        ('idata', c_short),
+        ('ldata', c_long), 
+        ('cdatas', c_char * MAX_AXIS),
+        ('idatas', c_short * MAX_AXIS), 
+        ('ldatas', c_long * MAX_AXIS)
+    ]
+
+class IODBPSD(Structure):
+    _fields_ = [
+         ('datano', c_short), 
+         ('type', c_short),
+         ('u', IODBPSD_U)
+    ]
+
+iodbpsd = IODBPSD()
+facos.cnc_rdparam(self.handler, 6711, 0, 4 + MAX_AXIS, addressof(iodbpsd))
+print(iodbpsd.u.ldata)
+
+
+以下是一个完整的demo
+from ctypes import *
+
+MAX_AXIS = 48
+
+
+class IODBPSD_U(Union):
+    _fields_ = [
+        ('cdata', c_char),
+        ('idata', c_short),
+        ('ldata', c_long),
+        ('cdatas', c_char * MAX_AXIS),
+        ('idatas', c_short * MAX_AXIS),
+        ('ldatas', c_long * MAX_AXIS)
+    ]
+
+
+class IODBPSD(Structure):
+    _fields_ = [
+        ('datano', c_short),
+        ('type', c_short),
+        ('u', IODBPSD_U)
+    ]
+
+
+facos = cdll.LoadLibrary('./libfwlib32.so.1')
+
+
+class Facos(object):
+    def __init__(self, ip, port, timeout=10):
+        if isinstance(ip, str):
+            ip = ip.encode()
+        self.ip = ip
+        self.port = port
+        self.timeout = timeout
+        self.handler = c_short()
+
+    def connect(self):
+        res = facos.cnc_allclibhndl3(c_char_p(self.ip), c_ushort(self.port), c_long(self.timeout), addressof(self.handler))
+        return res == 0
+
+    def disconnect(self):
+        res = facos.cnc_freelibhndl(self.handler)
+        return res == 0
+
+    @property
+    def products(self):
+        """
+        生产件数
+        :return: 生产件数
+        """
+        iodbpsd = IODBPSD()
+        facos.cnc_rdparam(self.handler, 6711, 0, 4 + MAX_AXIS, addressof(iodbpsd))
+        return iodbpsd.u.ldata
+
+    def __enter__(self):
+        if self.connect():
+            return self
+        raise Exception("Connection failed")
+
+    def __exit__(self, type, value, traceback):
+        self.disconnect()
+
+
+if __name__ == "__main__":
+    with Facos("192.168.1.1", 8193) as f:
+        print("生产件数:", f.products)
+
+
+
+10.
+Extract Data from Mazak Controllers
+https://www.cnczone.com/forums/mazak-mitsubishi-mazatrol/238404-extract-data-mazak-controllers.html
+
+
