@@ -648,6 +648,46 @@ Fixes #40070
 
 
 
+20.
+Julia With Calculus 
+
+https://github.com/jverzani/CalculusWithJulia.jl
+
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/dev/
+
+
+http://mth229.github.io
+
+http://mth229.github.io
+
+https://www.math.csi.cuny.edu/Computing/matlab/Projects/MTH229/Mth229_Julia_Projects.pdf
+
+https://github.com/mth229
+
+https://www.math.csi.cuny.edu/Computing/matlab/Projects/MTH229/
+
+
+
+21.
+Julia with QuantEcon 
+https://julia.quantecon.org/intro.html
+
+9. Solvers, Optimizers, and Automatic Differentiation
+
+Tools and Techniques
+14. Geometric Series for Elementary Economics
+15. Linear Algebra
+16. Orthogonal Projections and Their Applications
+17. LLN and CLT
+18. Linear State Space Models
+19. Finite Markov Chains
+20. Continuous State Markov Chains
+21. A First Look at the Kalman Filter
+22. Numerical Linear Algebra and Factorizations
+23. Krylov Methods and Matrix Conditioning
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
