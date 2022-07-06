@@ -672,19 +672,100 @@ https://www.math.csi.cuny.edu/Computing/matlab/Projects/MTH229/
 Julia with QuantEcon 
 https://julia.quantecon.org/intro.html
 
-9. Solvers, Optimizers, and Automatic Differentiation
+9.) Solvers, Optimizers, and Automatic Differentiation
 
 Tools and Techniques
-14. Geometric Series for Elementary Economics
-15. Linear Algebra
-16. Orthogonal Projections and Their Applications
-17. LLN and CLT
-18. Linear State Space Models
-19. Finite Markov Chains
-20. Continuous State Markov Chains
-21. A First Look at the Kalman Filter
-22. Numerical Linear Algebra and Factorizations
-23. Krylov Methods and Matrix Conditioning
+14.) Geometric Series for Elementary Economics
+15.) Linear Algebra
+16.) Orthogonal Projections and Their Applications
+17.) LLN and CLT
+18.) Linear State Space Models
+19.) Finite Markov Chains
+20.) Continuous State Markov Chains
+21.) A First Look at the Kalman Filter
+22.) Numerical Linear Algebra and Factorizations
+23.) Krylov Methods and Matrix Conditioning
+
+
+
+22.
+Julia Arrays, Stack & Heap, slice, copy, shallow copy, deepcopy
+Julialang functions: ismutable, isbits, objectid, eachindex, axes, eachrow, \xor, 
+Python functions: id, obj.copy(), import copy as cp cp.copy(), cp.deepcopy() 
+
+What scientists must know about hardware to write fast code - Jakob Nybo Nissen
+https://biojulia.net/post/hardware/
+
+
+https://docs.julialang.org/en/v1/devdocs/offset-arrays/
+
+replace many uses of size with axes
+replace 1:length(A) with eachindex(A), or in some cases LinearIndices(A)
+replace explicit allocations like Array{Int}(undef, size(B)) with similar(Array{Int}, axes(B))
+
+
+Julia arrays
+https://danmackinlay.name/notebook/julia_arrays.html
+
+
+Multi-dimensional Arrays
+https://docs.julialang.org/en/v1/manual/arrays/
+
+
+Copying Arrays in Julia
+http://www.cristinagreen.com/copying-arrays-in-julia.html
+
+
+What is the difference between copy() and deepcopy()?
+https://discourse.julialang.org/t/what-is-the-difference-between-copy-and-deepcopy/3918/2
+
+b = deepcopy(a) keeps unwrapping any mutables inside of ‘a’ until it reaches all the immutables at all the levels, and copies all the data and structure of the old object to a new object.
+
+b = a copies ‘a’ by reference, so ‘b’ and ‘a’ refer to the same object. Therefore b.field1 = 2 makes a.field1 == 2 true.
+
+
+Explanation of Deep and Shallow Copying
+https://www.cs.utexas.edu/~scottm/cs307/handouts/deepCopying.htm
+
+A shallow copy can be made by simply copying the reference.
+
+A deep copy means actually creating a new array and copying over the values.
+
+
+Python - 淺複製(shallow copy)與深複製(deep copy)
+https://ithelp.ithome.com.tw/articles/10221255
+
+淺複製僅複製容器中元素的地址
+深複製完全複製了一份副本，容器與容器中的元素地址都不一樣
+一般 copy
+三種方法
+
+b = list(a)
+b = a[:]
+b = a.copy() PS: 淺複製Shallow copy
+
+
+淺複製與深複製 Shallow copy and deep copy 的差別
+淺複製與深複製的關鍵差別在於，複製的變數中是否有可變型別
+
+#%% Shallow copy and deep copy
+import copy
+a = [1, [2,3]]
+a_ref = a
+a_shallowcopy = copy.copy(a)
+a_deepcopy = copy.deepcopy(a)
+
+a[0] = 4
+其中 a[0] 為數字，即為不可變型別，則深／淺複製沒有差別
+
+a[1][1] = 5
+其中 a[1][1] 為list，即為可變型別，可以發現淺複製 (shallow copy) 被改變了，而深複製 (deep copy) 則沒有被改變，故得知:
+
+淺/深複在製第一層變數均已指向不同記憶體
+BUT!!!
+淺複製在第二層變數仍與原始變數指向相同記憶體
+深複製在第二層變數已指向不同記憶體
+深複製 (deep copy) 建立一份完全獨立的變數
 
 
 
