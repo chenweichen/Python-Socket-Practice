@@ -264,3 +264,12 @@ Distribution-Free Predictive Inference for Regression
 https://www.stat.cmu.edu/~ryantibs/papers/conformal.pdf
 
 
+
+20.
+Conformal Prediction
+https://github.com/gpeyre/numerical-tours/blob/master/python/ml_11_conformal_prediction.ipynb
+
+Numerical Tours of Signal Processing
+https://github.com/gpeyre/numerical-tours/tree/master/julia
+
+
