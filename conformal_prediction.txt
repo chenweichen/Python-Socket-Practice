@@ -273,3 +273,19 @@ Numerical Tours of Signal Processing
 https://github.com/gpeyre/numerical-tours/tree/master/julia
 
 
+
+21.
+With MAPIE, uncertainties are back in machine learning - Vianney Taquet
+https://towardsdatascience.com/with-mapie-uncertainties-are-back-in-machine-learning-882d5c17fdc3
+
+Machine learning models use historical data to make their predictions. By essence, the predictions of machine learning models are always uncertain because data are imperfect both in terms of quality and quantity. The uncertainties associated with AI model predictions can therefore be decomposed into two main types: the aleatoric and epistemic uncertainties, due to the data quality and data quantity, respectively.
+
+Aleatoric uncertainty. First, historical data are always noisy. The noise can for example be due to the limited precision of captors used to measure the physical measurements of industrial machines. It can also be due to the unavoidable error made by humans in the labelling process on images, which can be complex for sensitive domains like medical imagery.
+
+Epistemic uncertainty. Second, acquired data used to train our model are always limited and cannot perfectly capture the whole and complex true distribution found in life. The incomplete distribution will induce uncertainties in the model parameters that will be propagated to the model predictions. For instance, let’s say you want to predict the hourly temperature in your garden of tomorrow based on the temperature you have read on your thermometer over the past week. However, you have not been able to read the temperature between midnight and 8am as you were sleeping. The predictions estimated by your AI model will therefore capture this uncertainty : it will be more uncertain during the night than during the day, simply because of the lack of data during nighttime !
+
+AI models need to associate uncertainties to their predictions mainly for three reasons. First, to reassure the public in the decisions taken by AI algorithms. Second, to better identify the limits of the AI models in production deployed by the companies. Third, to give a strong and useful indicator to the business in their decision making and risk management.
+
+Estimating uncertainties associated with AI predictions is already mandatory in sensitive domains like autonomous driving or medical imagery where decisions made by or based on AI have a direct impact on human life. Quantifying uncertainties will also be soon mandatory in other domains too as the notions of model accuracy and robustness play a central role in the proposal of the European Parliament and the Council on the Regulation of Artificial Intelligence available here. We can for instance quote Section 3.3 of this proposal : “The requirements will concern data, documentation and traceability, provision of information and transparency, human oversight and robustness and accuracy and would be mandatory for high-risk AI systems.”. Estimating the uncertainties of AI models is therefore becoming a regulatory issue for all companies dealing with high-risk AI systems, whatever their line of business. Besides high-risks sectors, all AIs can leverage uncertainty quantification by building trust and support change management.
+
+
