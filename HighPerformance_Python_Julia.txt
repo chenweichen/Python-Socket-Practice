@@ -806,6 +806,127 @@ define a separate function for each vectorized operation.
 
 
 
+24.
+Why is this broadcast operation slower than a nested for-loop
+https://stackoverflow.com/questions/72753803/why-is-this-broadcast-operation-slower-than-a-nested-for-loop
+
+
+using BenchmarkTools
+
+function bounds_error(x, xl)
+    num_x_rows = size(x,1)
+    num_dim = size(xl, 1)
+    for i in 1:num_x_rows
+        for j in 1:num_dim
+            if (x[i, j] < xl[j,1] || x[i,j] > xl[j,2])
+                return true
+            end
+        end
+    end
+    return false
+end
+
+function bounds_error2(x, xl)
+    for row in eachrow(x)
+        xlt = transpose(xl)
+        if any(row .< xlt[1, :]) == true || any(row .> xlt[2, :])
+            return true
+        end
+    end
+    return false
+end
+
+#number of rows in xl (or xlimits) will always be equal to number of columns in x
+
+xl =  [     -5.0  5.0
+            -5.0  5.0
+            -5.0  5.0]
+
+x = [1.0 2.0 3.0; 
+     4.0 5.0 6.0]
+
+
+
+The main reason for this difference is memory allocations (0 vs. 12 here).
+
+#  20.645 ns (0 allocations: 0 bytes)
+# 347.870 ns (12 allocations: 704 bytes)
+Currently, slices in Julia create a copy, so xlt[1,:] and xlt[2,:] allocates memory. To remedy this problem you should use @views. The second issue is the element-wise comparisons row .< xlt[1,:] and row .> xlt[2,:] create a temporary Boolean array. To avoid allocation of a temporary array, you should map any(t->t[1]<t[2], zip(row,xl1)) so that the comparison is done one element at a time like a loop.
+
+After applying these tips, the performance difference on my machine is now about 2ns only, which accounts for the convenience of eachrow, zip, etc. instead of manual loops.
+
+Note, for the first function, you can use axes() to loop over first or second dimension conveniently. And when benchmarking any Julia code with BenchmarkTools.jl, don't forget to interpolate ($) all variable names of a function to avoid working on global variables.
+
+
+function bounds_error(x, xl)
+    for i in axes(x,1)
+        for j in axes(xl, 1)
+            if (x[i, j] < xl[j,1] || x[i,j] > xl[j,2])
+                return true
+            end
+        end
+    end
+    return false
+end
+
+@views function bounds_error2(x, xl)
+    xl1, xl2 = xl[:,1], xl[:,2]
+    for row in eachrow(x)
+        if any(t->t[1]<t[2], zip(row,xl1)) || any(t->t[1]>t[2], zip(row,xl2))
+            return true
+        end
+    end
+    return false
+end
+
+@btime bounds_error($x, $xl)  #  8.100 ns (0 allocations: 0 bytes)
+@btime bounds_error2($x, $xl) # 10.800 ns (0 allocations: 0 bytes)
+
+
+While allocations make the difference for these particular inputs, in general the loop will be faster because it bails out immediately when it finds a value that is outside the limits, while the broadcasted version checks both entire arrays. This will be much more important than the allocations. – 
+DNF -  Jun 25 at 14:09
+
+That's true, and is closely related to allocations as you said, any will wait for a whole row comparison to start its check. – 
+AboAmmar  Jun 25 at 14:13
+
+
+
+25.
+Broadcasting is much slower than a for loop #28126
+https://github.com/JuliaLang/julia/issues/28126
+
+julia> using BenchmarkTools
+
+julia> function foo(a::Vector{T}, b::Vector{T}, c::Vector{T}, d::Vector{T}, e::Vector{T}) where T
+           @. a = b + 0.1 * (0.2c + 0.3d + 0.4e)
+           nothing
+       end
+foo (generic function with 1 method)
+
+julia> function goo(a::Vector{T}, b::Vector{T}, c::Vector{T}, d::Vector{T}, e::Vector{T}) where T
+           @assert length(a) == length(b) == length(c) == length(d) == length(e)
+           @inbounds for i in eachindex(a)
+               a[i] = b[i] + 0.1 * (0.2c[i] + 0.3d[i] + 0.4e[i])
+           end
+           nothing
+       end
+goo (generic function with 1 method)
+
+julia> a,b,c,d,e=(rand(1000) for i in 1:5)
+Base.Generator{UnitRange{Int64},getfield(Main, Symbol("##9#10"))}(getfield(Main, Symbol("##9#10"))(), 1:5)
+
+julia> @btime foo($a,$b,$c,$d,$e)
+  1.277 μs (0 allocations: 0 bytes)
+
+julia> @btime goo($a,$b,$c,$d,$e)
+  345.568 ns (0 allocations: 0 bytes)
+
+
+Workaround #28126, support SIMDing broadcast in more cases #30973
+https://github.com/JuliaLang/julia/pull/30973
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
