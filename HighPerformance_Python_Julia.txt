@@ -769,6 +769,43 @@ BUT!!!
 
 
 
+23.
+Julia Performance Tips 
+https://docs.julialang.org/en/v1/manual/performance-tips/
+
+More dots: Fuse vectorized operations
+Julia has a special dot syntax that converts any scalar function into a "vectorized" function call, and any operator into a "vectorized" operator, with the special property that nested "dot calls" are fusing: they are combined at the syntax level into a single loop, without allocating temporary arrays. If you use .= and similar assignment operators, the result can also be stored in-place in a pre-allocated array (see above).
+
+In a linear-algebra context, this means that even though operations like vector + vector and vector * scalar are defined, it can be advantageous to instead use vector .+ vector and vector .* scalar because the resulting loops can be fused with surrounding computations. For example, consider the two functions:
+
+julia> f(x) = 3x.^2 + 4x + 7x.^3;
+
+julia> fdot(x) = @. 3x^2 + 4x + 7x^3 # equivalent to 3 .* x.^2 .+ 4 .* x .+ 7 .* x.^3;
+
+Both f and fdot compute the same thing. However, fdot (defined with the help of the @. macro) is significantly faster when applied to an array:
+
+julia> x = rand(10^6);
+
+julia> @time f(x);
+  0.019049 seconds (16 allocations: 45.777 MiB, 18.59% gc time)
+
+julia> @time fdot(x);
+  0.002790 seconds (6 allocations: 7.630 MiB)
+
+julia> @time f.(x);
+  0.002626 seconds (8 allocations: 7.630 MiB)
+
+That is, fdot(x) is ten times faster and allocates 1/6 the memory of f(x), because each * and + operation in f(x) allocates a new temporary array and executes in a separate loop. (Of course, if you just do f.(x) then it is as fast as fdot(x) in this example, but in many contexts it is more convenient to just sprinkle some dots in your expressions rather than defining a separate function for each vectorized operation.)
+
+https://github.com/JuliaLang/julia/commit/51bb96857d26f67e62f0edc4fc4682a156cb3d08
+
+a new temporary array and executes in a separate loop. In this example
+`f.(x)` is as fast as `fdot(x)` but in many contexts it is more
+convenient to sprinkle some dots in your expressions than to
+define a separate function for each vectorized operation.
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
