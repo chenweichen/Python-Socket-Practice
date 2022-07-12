@@ -289,3 +289,38 @@ AI models need to associate uncertainties to their predictions mainly for three 
 Estimating uncertainties associated with AI predictions is already mandatory in sensitive domains like autonomous driving or medical imagery where decisions made by or based on AI have a direct impact on human life. Quantifying uncertainties will also be soon mandatory in other domains too as the notions of model accuracy and robustness play a central role in the proposal of the European Parliament and the Council on the Regulation of Artificial Intelligence available here. We can for instance quote Section 3.3 of this proposal : “The requirements will concern data, documentation and traceability, provision of information and transparency, human oversight and robustness and accuracy and would be mandatory for high-risk AI systems.”. Estimating the uncertainties of AI models is therefore becoming a regulatory issue for all companies dealing with high-risk AI systems, whatever their line of business. Besides high-risks sectors, all AIs can leverage uncertainty quantification by building trust and support change management.
 
 
+
+22.
+Private Prediction Sets
+by Anastasios Nikolas Angelopoulos, Stephen Bates, Tijana Zrnic, and Michael I. Jordan
+https://hdsr.mitpress.mit.edu/pub/deziirvg/release/1
+
+https://doi.org/10.1162/99608f92.16c71dad
+
+In real-world settings involving consequential decision-making, the deployment of machine learning systems generally requires both reliable uncertainty quantification and protection of individuals’ privacy. We present a framework that treats these two desiderata jointly. Our framework is based on conformal prediction, a methodology that augments predictive models to return prediction sets that provide uncertainty quantification—they provably cover the true response with a user-specified probability, such as 90%. One might hope that when used with privately trained models, conformal prediction would yield privacy guarantees for the resulting prediction sets; unfortunately this is not the case. To remedy this key problem, we develop a method that takes any pretrained predictive model and outputs differentially private prediction sets. Our method follows the general approach of split conformal prediction; we use holdout data to calibrate the size of the prediction sets but preserve privacy by using a privatized quantile subroutine. This subroutine compensates for the noise introduced to preserve privacy in order to guarantee correct coverage. We evaluate the method on large-scale computer vision data sets.
+
+
+23.
+Measuring Models’ Uncertainty: Conformal Prediction
+https://medium.com/data-from-the-trenches/measuring-models-uncertainty-with-conformal-prediction-f6aa8debb50e
+
+
+https://gist.github.com/dsleo
+
+https://gist.github.com/dsleo/3a860e009b3b987dec4f0ad048bcbc78
+
+https://gist.github.com/dsleo/2880882b5e1c1feab677c4cf421e806d
+
+https://gist.github.com/dsleo/2880882b5e1c1feab677c4cf421e806d
+
+
+
+24.
+Conformal prediction - Henrik Boström
+https://github.com/henrikbostrom/RandomForest
+
+https://www.math-stockholm.se/polopoly_fs/1.731834.1600689928!/HenrikBostrom_Slides.pdf
+
+https://www.kth.se/polopoly_fs/1.769817.1600689403!/KTH%20Conformal%20prediction%202017-10-25.pdf
+
+
