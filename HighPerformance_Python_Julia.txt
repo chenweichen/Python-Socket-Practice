@@ -927,6 +927,41 @@ https://github.com/JuliaLang/julia/pull/30973
 
 
 
+26.
+Difference between Base and Core
+https://discourse.julialang.org/t/difference-between-base-and-core/37426
+
+julia> Base.Int
+Int64
+
+julia> Core.Int
+Int64
+
+julia> Base.Int == Core.Int
+true
+
+julia> Int.name.module
+Core
+
+
+I didn’t know either until I watched this last year starting around the 9:00 mark. https://youtu.be/TPuJsgyu87U?t=542
+It’s because some parts have to be duplicated so the necessary compiler internals can work, or something to that effect.
+
+Core is what’s defined in C as the very core of the language. 
+There is very little there. 
+It’s used to bootstrap the rest of the language by gradually defining more and more of Base in terms of 
+what was defined before. 
+Core is kind of an implementation detail that users should never need to interact with.
+
+
+Core.AbstractArray 
+https://docs.julialang.org/en/v1/base/arrays/#Core.AbstractArray
+
+Core.Array 
+https://docs.julialang.org/en/v1/base/arrays/#Core.Array
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
