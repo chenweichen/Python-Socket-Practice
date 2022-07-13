@@ -974,6 +974,16 @@ https://github.com/JuliusTechCo/JuliusGraph
 
 
 
+28.
+UQ MATH2504 - Programming of Simulation, Analysis, and Learning Systems - (Semester 2 2022)
+https://courses.smp.uq.edu.au/MATH2504/2022/lectures_html/lecture-unit-2.html
+
+Where the O(⋅) here follow Big O notation.
+
+Priority queues, heaps, and back to sorting
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
