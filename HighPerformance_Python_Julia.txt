@@ -962,6 +962,18 @@ https://docs.julialang.org/en/v1/base/arrays/#Core.Array
 
 
 
+27.
+Graph computing benchmarks: comparing the scalability of Dask, Dagger.jl, Tensorflow and Julius
+https://discourse.julialang.org/t/graph-computing-benchmarks-comparing-the-scalability-of-dask-dagger-jl-tensorflow-and-julius/80745
+
+https://juliustechco.github.io/JuliusGraph/dev/pages/t007_benchmark.html#Tutorial-7:-Graph-Computing-Benchmark-1
+
+https://gist.github.com/jpsamaroo/95c78b3361ae454a51916183f2cf346f
+
+https://github.com/JuliusTechCo/JuliusGraph
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
