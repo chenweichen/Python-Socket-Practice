@@ -1030,3 +1030,68 @@ https://www.datacamp.com/tutorial/asyncio-introduction
 
 
 
+7.
+Big O notation
+
+Big O Notation and Algorithm Analysis with Python Examples
+https://stackabuse.com/big-o-notation-and-algorithm-analysis-with-python-examples/
+
+
+The Big O Notation
+https://towardsdatascience.com/big-o-notation-32fb458e5260
+
+
+All You Need to Know About Big O Notation [Python Examples]
+https://skerritt.blog/big-o/
+
+
+Difference between Big-O and Little-O Notation
+https://stackoverflow.com/questions/1364444/difference-between-big-o-and-little-o-notation
+
+
+What is Big O Notation Explained: Space and Time Complexity
+https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/
+
+Big O, Little O, Omega & Theta
+
+Big O: “f(n) is O(g(n))” iff for some constants c and N₀, f(N) ≤ cg(N) for all N > N₀
+
+Omega: “f(n) is Ω(g(n))” iff for some constants c and N₀, f(N) ≥ cg(N) for all N > N₀
+
+Theta: “f(n) is Θ(g(n))” iff f(n) is O(g(n)) and f(n) is Ω(g(n))
+
+Little O: “f(n) is o(g(n))” iff f(n) is O(g(n)) and f(n) is not Θ(g(n))
+
+—Formal Definition of Big O, Omega, Theta and Little O
+In plain words:
+
+Big O (O()) describes the upper bound of the complexity.
+Omega (Ω()) describes the lower bound of the complexity.
+Theta (Θ()) describes the exact bound of the complexity.
+Little O (o()) describes the upper bound excluding the exact bound.
+
+For example, the function g(n) = n² + 3n is O(n³), o(n⁴), Θ(n²) and Ω(n). But you would still be right if you say it is Ω(n²) or O(n²).
+
+Generally, when we talk about Big O, what we actually meant is Theta. It is kind of meaningless when you give an upper bound that is way larger than the scope of the analysis. This would be similar to solving inequalities by putting ∞ on the larger side, which will almost always make you right.
+
+
+Analysis of Algorithms | Big-O analysis
+https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/
+
+
+Understanding Big O notation
+https://python.plainenglish.io/understanding-the-big-o-notation-5041f25a3f91
+
+
+Difference between Big-O and Little-o Notations
+https://www.baeldung.com/cs/big-o-vs-little-o-notation
+
+
+Big O Notation Explained with Examples
+https://www.freecodecamp.org/news/big-o-notation-explained-with-examples/
+
+
+Big O Notations
+https://juliatorrejon.com/documentation/big-o-notation/
+
+
