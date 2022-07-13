@@ -1,0 +1,81 @@
+# Deep Learning material
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+The Mathematical Engineering of Deep Learning
+https://deeplearningmath.org
+
+
+Early material used in an AMSI summer school 2021 course
+https://deeplearningmath.org/index_amsi.html
+
+https://github.com/yoninazarathy/MathematicalEngineeringDeepLearning
+
+
+
+2.
+Julia Flux w/wo GPU 
+
+GPU Support
+https://fluxml.ai/Flux.jl/stable/gpu/
+
+I managed to make Flux.jl work with GPUs again!
+https://discourse.julialang.org/t/i-managed-to-make-flux-jl-work-with-gpus-again/19386/2
+
+
+How to tell Flux.jl not to use the GPU?
+https://stackoverflow.com/questions/68195038/how-to-tell-flux-jl-not-to-use-the-gpu
+
+By default, Flux will not use the GPU unless you tell it to. First, ensure CUDA is not loaded my commenting out using CUDA. Next, remove any calls to gpu. In general, if you expect to be selectively running a program either on the CPU and GPU, then write your code using the following design pattern:
+
+
+GPU vs CPU benchmarks with Flux.jl
+https://thomaswiemann.com/GPU-vs-CPU-benchmarks-with-Flux.jl
+
+
+How can I make Flux use all my CPUs?
+https://discourse.julialang.org/t/how-can-i-make-flux-use-all-my-cpus/21869/6
+
+
+Flux and cpu cores
+https://discourse.julialang.org/t/flux-and-cpu-cores/45318
+
+
+
+3.
+Doing small network scientific machine learning in Julia 5x faster than PyTorch
+https://julialang.org/blog/2022/04/simple-chains/
+
+
+https://github.com/PumasAI/SimpleChains.jl
+
+
+
+4.
+Econometrics – Econ 21020 (Spring 2022)
+https://thomaswiemann.com/econ21020/material
+
+
+https://github.com/thomaswiemann/MyMethods.jl
+
+
+Types and Multiple Dispatch in Julia
+https://thomaswiemann.com/Types-and-Multiple-Dispatch-in-Julia
+
+
+Getting Started with Julia Modules
+https://thomaswiemann.com/Getting-Started-With-Julia-Modules
+
+
+Course material for ECON 31740 / PPHA 48403 : Optimization-Conscious Econometrics
+https://sites.google.com/site/guillaumeallairepouliot/oce-quarter-course
+
+
+Course material for ECON2148 : Optimization-Conscious Econometrics
+https://sites.google.com/site/guillaumeallairepouliot/oce-semester-course
+
+
