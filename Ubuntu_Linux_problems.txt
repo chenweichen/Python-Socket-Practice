@@ -1,0 +1,45 @@
+# Ubuntu Linux Problems
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+Pending Update of Snap Store
+https://askubuntu.com/questions/1412575/pending-update-of-snap-store
+
+There are a couple things happening.
+
+First, let's talk about the EASIEST way to make the notification go away:
+
+Quit the application (in this case, snap-store [a.k.a. Ubuntu Software]). You might not recall that you have it open, but you do. Maybe it's minimized. Find it and Quit the application.
+Run sudo snap refresh. Let the command complete.
+Re-launch your application.
+Second, let's talk about WHY it's happening:
+
+Snapd detects when a new version is available. If the application is currently running, snapd will inhibit updating that application for up to 14 days.
+
+With most applications, this works fine. You Quit out of an application, a few hours later snapd updates the application (it checks several times each day). and the next time you open the application you don't even notice that it's been updated. Great!
+
+But some applications are open for a long time that runs up against that 14-day window. Like web browsers on laptops that get closed/suspended instead of quit/restarted. Unfortunately, when the 14-day window expires, snapd will kill the application in order to implement the upgrade. To the user, this looks like Firefox crashed unexpectedly, losing whatever they were doing.
+
+Snapd MUST refresh snaps. That's a legacy of the original design; snaps were originally designed for phones and IOT devices that MUST work reliably and MUST update reliably without user input. You can disable it if you know how...but it's a bad idea for must users -- disabling updates means no security patches and insecure applications.
+Third, let's talk about why you are suddenly getting these notifications NOW.
+
+The Snap developers were dissatisfied with those two choices (kill the application to force the upgrade -or- disable upgrades entirely), so they created a better path: Remind the user to Quit the application. That is the notification you are seeing. It's new (turned on by default) in Ubuntu 22.04.
+
+If you ignore it, then when the countdown reaches zero snapd will terminate the application and refresh that snap automatically.
+Finally, there's one obvious question remaining: Why doesn't snapd download the update before nagging you?
+
+Well, that's a work in progress. The snapd developers welcome code contributions to help make that happen safely. Snapd is Open Source.
+
+
+so to disable it, run this: snap set core experimental.refresh-app-awareness=false 
+
+
+Kill "snap" at System Monitor
+sudo apt update && sudo apt upgrade
+sudo snap refresh
+
+
