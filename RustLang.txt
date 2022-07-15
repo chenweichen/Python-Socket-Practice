@@ -200,3 +200,31 @@ When a parameter is not important, it can be omitted, or you can choose unknown 
 Finally, the ABI option is something that will pick default CPU/FPU, define the specific behaviour of your code (PCS, extensions), and also choose the correct library calls, etc.
 
 
+
+22.
+Rust lang target machine 
+
+Cross-compilation
+https://rust-lang.github.io/rustup/cross-compilation.html
+
+
+A note on compiler support
+https://docs.rust-embedded.org/embedonomicon/compiler-support.html
+
+LLVM support
+Built-in target
+rust-std component
+
+
+Targeting ARM64 for Windows in Rust
+https://patriksvensson.se/posts/2020/05/targeting-arm-for-windows-in-rust
+
+
+
+23.
+Rust in Visual Studio Code
+https://code.visualstudio.com/docs/languages/rust
+
+rust-analyzer 
+
+
