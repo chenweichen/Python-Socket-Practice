@@ -43,3 +43,127 @@ sudo apt update && sudo apt upgrade
 sudo snap refresh
 
 
+
+2.
+Docker Concept and Tutorial
+
+Docker 基本教學
+https://ithelp.ithome.com.tw/articles/10199339
+
+
+Docker 基本教學 - 從無到有 Docker-Beginners-Guide 教你用 Docker 建立 Django + PostgreSQL
+https://github.com/twtrubiks/docker-tutorial
+
+
+入門Docker 教學】軟體工程師都應該學會的基本觀念與知識
+https://glints.com/tw/blog/docker-basic-tutorial/
+
+
+Docker 實戰系列（一）：一步一步帶你 dockerize 你的應用
+https://larrylu.blog/step-by-step-dockerize-your-app-ecd8940696f4
+
+想像一個情況，當你在本機開發完準備要部屬到自己的 server 上時，你發現 server 的系統不是你熟悉的 Ubuntu 而是 CentOS，除此之外你還需要自己安裝 php7、設定 MySQL 的帳號密碼跟架設 Apache，光想到要設定這些環境頭都痛了，這時候你就需要 Docker 了
+
+Docker 可以幫你把 Ubuntu + php7 + MySQL + Apache 的環境跟你的程式碼打包起來，整包丟到 CentOS的 server 上去跑，不用很勉強的在不熟悉的 CentOS 上配置環境，弄個不好說不定還會影響到其他正在跑的程式
+
+很多人看到這裡可能會有點搞混 image 跟 container，說明一下，image 指的是已經打包好的環境，但是還沒有跑起來，就是一堆檔案而已，而 container 則是把 image 跑起來之後產生的 instance，他們之間的關係就像程式碼跟跑起來的程式，程式碼不跑就只是一堆檔案，但跑起來之後他就會變成一個真的在跑 process
+
+我們的終極目標是要把你的程式碼跟想要的環境打包起來，變成一個 image，之後不管到哪一台機器上，只要有裝 Docker 而且有這個 image 就可以把你的程式跑起來
+
+
+教學課程：使用 Visual Studio Code 建立和共用 Docker 應用程式
+https://docs.microsoft.com/zh-tw/visualstudio/docker/tutorials/docker-tutorial
+
+
+教學課程：使用 MySQL 和 Docker Compose 建立多容器應用程式
+https://docs.microsoft.com/zh-tw/visualstudio/docker/tutorials/tutorial-multi-container-app-mysql
+
+
+Docker 基本觀念與使用教學：自行建立 Docker 影像檔
+https://blog.gtwang.org/virtualization/docker-basic-tutorial/
+
+
+3.
+Dose docker container has its operation system?
+
+docker container does not need an OS, but each container has one. Why?
+https://stackoverflow.com/questions/45177473/docker-container-does-not-need-an-os-but-each-container-has-one-why
+
+The introduction section of the documentation (https://docs.docker.com/get-started/#a-brief-explanation-of-containers) reads:
+
+Containers run apps natively on the host machine’s kernel. They have better performance characteristics than virtual machines that only get virtual access to host resources through a hypervisor. Containers can get native access, each one running in a discrete process, taking no more memory than any other executable.
+
+
+
+It's now long time since I posted this question, but it seems, like it still get hits... So I decided to answer it - in fact mainly the question, which is in the title (the questions in the text are carefully answered by Curt J. Sampson).
+
+So, the discussion of the "main" question: if containers are not VMs, then why do we need VMs for them?
+
+As you may guess, I am working on windows (on Linux this question would not emerge, because on Linux one does not need VMs for docker).
+
+The reason, why we need a VM for containers in Winodows is pretty obvious (probably this is the reason, why nobody mentions it explicitly). As was already mentioned here and it many other FAQs, containers reuse kernel and some other resources of the hosting OS. Taking into account, that most of the containers available out there are based on Linux, one may conclude, that those containers need host OS to provide Linux kernel for them to run. Which is not natively easy on Windows (I am not sure, may be it is now possible with Linux subsystem). This is why on Windows we need one VM, which runs Linux and docker service inside this VM. And then, when we start the containers, they are also started inside this VM (and reuse the resources of its Linux OS). All the containers run inside the same VM. Getting a bit more technical: by default docker uses Hyper-V to run this linux VM, but one can also use Docker-Toolbox, which uses Oracle VirtualBox. By the way, VM can be freely seen in the Virtual Box interface. Nice part is that Docker (or Docker toolbox) takes care about managing this VM and we don't need to care about it.
+
+Now some bonus question, which that time confused me even more. One may think: "Ok, it is clear now. If we run Linux container on Winodws OS, then we need Linux kernel and thus need VM with Linux. But if we run Windows container on Windows (by the way, it exists), then VM should not be needed, right?..." Answer: "wrong" (or almost wrong). :) The problem is, that the Windows based containers (at least those, which I saw) use windows server kernel, which is not available e.g. in Windows 10. Thus one still need VM with special version of Windows Server running on it. In fact MS even created special version of Windows Server, which can be run on VM for development purposes free of charge specifically to enable development of Windows-Server based containers. If my understanding is correct, those containers should be possible to run without VM on Windows Server. I should admit, that I never checked it though.
+
+I hope, that this messy explanation may help someone to better understand the topic.
+
+
+Do Containers Have An OS?
+https://serverfault.com/questions/951854/do-containers-have-an-os
+
+It largely depends on what your view of an O.S. is.
+
+Containers fundamentally are a method to isolate both a running process from all other processes on a machine, and the binary and all its dependencies from the host machine filesystem. This then makes them trivial to move between and run on any number of machines. They are in no way virtualisation, therefore as you mention in your question, any process running in a container is running on the host machines kernel. From some points of view an operating system, fundamentally is the kernel.
+
+Balanced against that, is that most software is not built to be monolithic, but is instead linked at compile time, against any number of shared libraries. So when you install an operating system distribution, as well as a kernel, you get a whole series of libraries and utilities, and any programs you install from the O.S. repos will be built against the libraries that are shipped with that OS distribution.
+
+Now when building a container, all that is required is the binary that you want to run, plus anything that that binary depends on. There is no requirement to package a complete O.S. distro filesystem. If your binary is not linked against any other library, you can almost get away with the single binary and nothing else. Check out this project https://github.com/davidcarboni-archive/ddd written by a chap who works with the same client I currently do, which demonstrates how little is required to build a functional container.
+
+So in an ideal world, given best practice largely is to build a container that runs a single process, each container would consist of nothing more than the relevant binary, plus any libraries, config files and working directories it needs. It is however, quite an involved and time consuming process to get that right in a lot of cases. Therefore it has now become a very common pattern, to simply package up the entire filesystem from a donor OS inside a container, as that way you know that any dependencies the process to be run has, will be present. It also adds the convenience of meaning that package management tools will be present, which makes building the container easier. It also means that utilities such as shells are also present, which makes life easier to debug a container (tho in some peoples minds, other than perhaps when you are developing a new container image, if you need to access a shell inside the container, you are doing it wrong).
+
+Whilst I understand why this pattern has become so prevalent, I do think it has disadvantages. First demonstrated by your question - it has made containers look a lot like virtualistation and thus sown a lot of confusion. More over, as someone who has just finished applying CIS server hardening to an estate of machines, packaging everything including the kitchen sink in every container, doesn't feel like great security practice, and I suspect at some point, that may come back to bite us.
+
+To expand on your two specific questions:
+
+1) I have addressed the subjects of shells already. As for things like systemd, they essentially have no place in a container. The Dockefile defines the process to run when the container is started. If you are trying to run a service manager and multiple services inside a container, you are likely doing it wrong.
+
+2) This is back to the question of what is an O.S.? The only sense that you install a given distro in a container, is that you get the filesystem and therefore the distros copies of binaries and shared libraries. It is not the same as virtualisation, where you have a copy of say, Centos running in a virtual machine on a host running say, Debian.
+
+
+Are containers independent of host OS?
+https://docs.microsoft.com/en-us/answers/questions/373498/are-containers-independent-of-host-os.html
+
+A container virtualises the underlying OS and causes the containerised app to perceive that it has the OS—including CPU, memory, file storage and network connections—all to itself. Because the differences in underlying OS and infrastructure are abstracted, as long as the base image is consistent, the container can be deployed and run anywhere. For developers, this is incredibly attractive.
+
+Since containers share the host OS, they do not need to boot an OS or load libraries. This enables containers to be much more efficient and lightweight. Containerised applications can start in seconds and many more instances of the application can fit onto the machine as compared to a VM scenario. The shared OS approach has the added benefit of reduced overhead when it comes to maintenance, such as patching and updates.
+
+Though containers are portable, they are constrained to the operating system they are defined for. For example, a container for Linux cannot run on Windows and vice versa.
+
+Same has been mentioned here and this is as per your understanding which you mentioned in your query.
+You can refer to below articles for more information around switching between Linux and Windows containers:
+
+https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers
+
+https://www.docker.com/blog/preview-linux-containers-on-windows/
+
+
+What part of Docker image defines its Operating System?
+https://superuser.com/questions/1343417/what-part-of-docker-image-defines-its-operating-system
+
+A Linux distribution is not its kernel. A kernel is needed, but a distribution works on a kernel.
+
+A distribution is simply that, a particular way of distributing all the packages necessary to create a working system.
+
+Generally this includes a package manager, and specific locations where packages are retrieved from.
+
+Because there are many ways to put together a working system each distribution makes choices about base packages needed. One distribution might choose to use basePackage v1.1 while another uses packageBase v7.8. It might be that that the two packages provide broadly the same functionality but work in a subtly different way meaning that other parts of the system need tweaks or configuration to work with them.
+
+There might be subtle differences in configuration files or filesystem layouts as well.
+
+In this way a distribution is built up, making choices about packages, merging them together, massaging to make them fit and generally establishing a baseline set of support packages that can be expected on every system.
+
+In theory you could compile a completely generic kernel with every module enabled and then drop it into any distribution. As long as the kernel provides the correct features required by the packages then it should just work. In practice it is a lot more difficult as system packages require specific kernel features and may not work if they are changed, which happens often with the Linux kernel, but the theory is there.
+
+What makes a docker container one distribution over another is the same. It is how the distribution within it is tied together and configured.
+
+
