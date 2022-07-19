@@ -1,0 +1,108 @@
+# Ubuntu Linux Problems
+
+## No.:
+## Title:
+## https links: 
+
+1.
+CUDA programming in Julia.
+https://github.com/JuliaGPU/CUDA.jl
+
+CUDA.jl currently also requires a CUDA-capable GPU with compute capability 3.5 (Kepler) or higher, 
+and an accompanying NVIDIA driver with support for CUDA 10.1 or newer. 
+These requirements are not enforced by the Julia package manager when installing CUDA.jl. 
+Depending on your system and GPU, you may need to install an older version of the package.
+
+
+
+2.
+Overview
+https://cuda.juliagpu.org/stable/installation/overview/
+
+The Julia CUDA stack requires users to have a functional NVIDIA driver and corresponding CUDA toolkit. 
+The former should be installed by you or your system administrator, 
+while the latter can be automatically downloaded by Julia using the artifact subsystem.
+
+
+Platform-support 
+https://cuda.juliagpu.org/stable/installation/overview/#Platform-support
+
+The main development platform (and the only CI system) however is x86_64 on Linux, 
+so if you are using a more exotic combination there might be bugs.
+
+
+NVIDIA-driver 
+https://cuda.juliagpu.org/stable/installation/overview/#NVIDIA-driver
+
+
+CUDA-toolkit 
+https://cuda.juliagpu.org/stable/installation/overview/#CUDA-toolkit
+
+
+Containers 
+https://cuda.juliagpu.org/stable/installation/overview/#Containers
+
+
+
+3.
+CUDA programming with Julia, Pt. 1
+https://irhum.pubpub.org/pub/julia-cuda/release/4
+
+https://irhum.github.io/blog/cudajulia
+
+https://github.com/irhum
+
+
+
+4.
+Notes on GPU Programming with Julia - Eric Aubanel
+http://www.cs.unb.ca/~aubanel/JuliaGPUNotesCUDA.html
+
+
+
+5.
+GPU support 
+https://fluxml.ai/Flux.jl/stable/gpu/
+
+
+
+6.
+NVIDIA CUDA
+https://juliagpu.org/cuda/
+
+
+
+7.
+Just compile it: High-level programming on the GPU with Julia - Tim Besard (@maleadt)
+https://llvm.org/devmtg/2019-04/slides/TechTalk-Besard-Just_compile_it_high_level_programming_on_the_GPU_with_Julia.pdf
+
+
+
+8.
+Need help with CUDA.jl installation
+https://discourse.julialang.org/t/need-help-with-cuda-jl-installation/52786
+
+
+
+9.
+An Introduction to GPU Programming in Julia 
+https://nextjournal.com/sdanisch/julia-gpu-programming
+
+
+
+10.
+NVIDIA CUDA developer zone 
+https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+
+https://docs.nvidia.com/deploy/cuda-compatibility/index.html
+
+
+
+11.
+CUDA 10.1 installation on Ubuntu 20.04
+https://medium.com/@exesse/cuda-10-1-installation-on-ubuntu-18-04-lts-d04f89287130
+
+Installing CUDA 10.1 on Ubuntu 20.04
+https://medium.com/@stephengregory_69986/installing-cuda-10-1-on-ubuntu-20-04-e562a5e724a0
+
+
