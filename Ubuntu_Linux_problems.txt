@@ -84,7 +84,7 @@ https://blog.gtwang.org/virtualization/docker-basic-tutorial/
 
 
 3.
-Dose docker container has its operation system?
+Dose docker container have its operation system?
 
 docker container does not need an OS, but each container has one. Why?
 https://stackoverflow.com/questions/45177473/docker-container-does-not-need-an-os-but-each-container-has-one-why
