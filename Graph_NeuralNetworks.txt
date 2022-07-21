@@ -1,0 +1,30 @@
+# Graph Neural Networks 
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+A Gentle Introduction to Graph Neural Networks
+https://distill.pub/2021/gnn-intro/
+
+
+
+2.
+CS224W: Machine Learning with Graphs - Stanford
+https://web.stanford.edu/class/cs224w/
+
+
+
+3.
+CausalGNN: Causal-based Graph Neural Networks for Spatio-Temporal Epidemic Forecasting
+https://www.aaai.org/AAAI22Papers/AISI-6475.WangL.pdf
+
+
+
+4.
+Relating Graph Neural Networks to Structural Causal Models
+https://arxiv.org/abs/2109.04173
+
+
