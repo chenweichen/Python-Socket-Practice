@@ -324,3 +324,98 @@ https://www.math-stockholm.se/polopoly_fs/1.731834.1600689928!/HenrikBostrom_Sli
 https://www.kth.se/polopoly_fs/1.769817.1600689403!/KTH%20Conformal%20prediction%202017-10-25.pdf
 
 
+
+25.
+Conformal Prediction 
+https://www.stat.cmu.edu/~larry/=sml/Conformal
+
+When doing estimation, we usually provide confidence intervals in addition to point estimates. Is there a similar notion for predictions? The answer is yes: we provide prediction
+sets or set-valued predictions. Given data (X1, Y1), . . . ,(Xn, Yn) we construct a set-valued
+function Cn, depending on (X1, Y1), . . . ,(Xn, Yn) such that
+P(Yn+1 ∈ Cn(Xn+1)) ≥ 1 − α.
+The approach we consider in these notes is conformal prediction. The idea is due to Vovk,
+Gammerman and Shafer (2005). The statistical theory for conformal prediction was developed in Lei, Robins and Wasserman (2013), Lei and Wasserman (2014), Lei, G’Sell, Rinaldo,
+Tibshirani and Wasserman (2017), Sadinle, Lei and Wasserman (2018).
+
+
+36-708 Statistical Methods for Machine Learning - Instructor: Larry Wasserman
+https://www.stat.cmu.edu/~larry/=sml/
+
+
+GraphicalModels
+https://www.stat.cmu.edu/~larry/=sml/GraphicalModels.pdf
+
+
+Directed Graphical Models
+https://www.stat.cmu.edu/~larry/=sml/DAGs.pdf
+
+
+Causal Inference
+https://www.stat.cmu.edu/~larry/=sml/Causation.pdf
+
+
+Online Learning 
+https://www.stat.cmu.edu/~larry/=sml/Online.pdf
+Once again, we follow Mohri, Rostamizadeh and Talwalkar (2012).
+Online (sequential) prediction is amazing because it is completely assumption free.
+
+
+High-Dimensional, Two-Sample Testing
+https://www.stat.cmu.edu/~larry/=sml/forests.pdf
+
+
+
+26.
+Wiki for Conformal Prediction 
+https://en.wikipedia.org/wiki/Conformal_prediction
+
+Regression algorithms
+Conformal prediction was initially formulated for the task of classification, but was later modified for regression. Unlike classification, which outputs p-values without a given significance level, regression requires a fixed significance level at prediction time in order to produce prediction intervals for a new test object. For classic conformal regression, there is no transductive algorithm. This is because it is impossible to postulate all possible labels for a new test object, because the label space is continuous. The available algorithms are all formulated in the inductive setting, which computes a prediction rule once and applies it to all future predictions.
+
+
+
+27.
+Unsupervised cross-user adaptation in taste sensation recognition based on surface electromyography with conformal prediction and domain regularized component analysis
+https://arxiv.org/abs/2110.11339
+
+
+Deep Learning-Based Conformal Prediction of Toxicity
+https://pubs.acs.org/doi/10.1021/acs.jcim.1c00208
+
+
+Conformal convolutional neural network (CCNN) for single-shot sensorless wavefront sensing
+https://opg.optica.org/oe/fulltext.cfm?uri=oe-28-13-19218&id=432670
+
+
+Few-shot Conformal Prediction with Auxiliary Tasks
+https://arxiv.org/abs/2102.08898
+
+
+Neural Networks Regression Inductive Conformal Predictor and Its Application to Total Electron Content Prediction
+https://projet.liris.cnrs.fr/imagine/pub/proceedings/ICANN-2010/papers/6352/63520032.pdf
+
+
+
+28.
+The tutorial contains Interactive material.
+https://cml.rhul.ac.uk/cp.html
+
+
+
+29.
+Conformal Time-series Forecasting - Kamile Stankeviciute, Ahmed M. Alaa, Mihaela van der Schaar
+https://proceedings.neurips.cc/paper/2021/hash/312f1ba2a72318edaaa995a67835fad5-Abstract.html
+
+
+
+30.
+Distributional conformal prediction - Victor Chernozhukov, Kaspar Wüthrich, and Yinchu Zhu 
+https://www.pnas.org/doi/10.1073/pnas.2107794118
+
+Significance
+Prediction problems are important in many contexts. Examples include cross-sectional prediction, time series forecasting, counterfactual prediction and synthetic controls, and individual treatment effect prediction. We develop a prediction method that works in conjunction with many powerful classical methods (e.g., conventional quantile regression) as well as modern high-dimensional methods for estimating conditional distributions (e.g., quantile neural networks). Unlike many existing prediction approaches, our method is valid conditional on the observed predictors and efficient under some conditions. Importantly, our method is also robust; it exhibits unconditional coverage guarantees under model misspecification, under overfitting, and with time series data.
+
+Abstract
+We propose a robust method for constructing conditionally valid prediction intervals based on models for conditional distributions such as quantile and distribution regression. Our approach can be applied to important prediction problems, including cross-sectional prediction, k–step-ahead forecasts, synthetic controls and counterfactual prediction, and individual treatment effects prediction. Our method exploits the probability integral transform and relies on permuting estimated ranks. Unlike regression residuals, ranks are independent of the predictors, allowing us to construct conditionally valid prediction intervals under heteroskedasticity. We establish approximate conditional validity under consistent estimation and provide approximate unconditional validity under model misspecification, under overfitting, and with time series data. We also propose a simple “shape” adjustment of our baseline method that yields optimal prediction intervals.
+
+
