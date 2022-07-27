@@ -132,3 +132,34 @@ The definitions in real analysis would barely change. In fact, they would be abs
 Once the framework of metric spaces is introduced AFTER all the real analysis, it is much more straightforward for a student to take it all in and generalise to measurable sets- primarily because it's effectively a second pass of all the information from real analysis, just abstracting those basic notions to any measurable set you like.
 
 
+
+4.
+Basic Analysis: Introduction to Real Analysis - By: Jiří Lebl
+email: jiri.lebl@gmail.com
+
+https://github.com/jirilebl/ra
+
+https://www.jirka.org/ra/
+
+Download the volume I of the book as PDF
+https://www.jirka.org/ra/realanal.pdf
+(Version 5.6, May 16th, 2022, 282 pages, 1.8 MB download)
+
+Download the volume II of the book as PDF
+https://www.jirka.org/ra/realanal2.pdf
+(Version 2.6, May 16th, 2022, 195 pages, 1.4 MB download)
+
+Check for any errata (volume I) (volume II) in the current version.
+https://www.jirka.org/ra/errata.html
+
+https://www.jirka.org/ra/errata2.html
+
+Look at the change log (volume I) (volume II) to see what changed in the newest version.
+
+https://www.jirka.org/ra/changes.html
+
+https://www.jirka.org/ra/changes2.html
+
+I started numbering things with version numbers starting at 4.0 for volume I, and version 1.0 for volume II. The first number is the major number and it really means "edition" and will be raised when substantial changes are made. The second number is raised for corrections only.
+
+
