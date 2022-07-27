@@ -44,3 +44,91 @@ Distributions
 https://www.youtube.com/playlist?list=PLBh2i93oe2qsbptdcvFlowCl51EX_a3nB
 
 
+
+2.
+Markdown Syntax 
+https://markdown.tw
+
+
+
+3.
+Metrics math real analysis
+https://www.startpage.com/sp/search
+
+
+
+3-1
+Metric (mathematics)
+https://en.wikipedia.org/wiki/Metric_(mathematics)
+
+
+
+3-2
+Real Analysis: Metric Spaces - Paul Skoufranis
+https://pskoufra.info.yorku.ca/files/2019/12/M4011-LectureNotes.pdf?x25477
+
+
+
+3-3
+
+http://alpha.math.uga.edu/~usher/notes.pdf
+
+
+
+3-4
+Real Analysis on Metric Spaces - Mark Dean
+http://www.columbia.edu/~md3405/Maths_RA1_14.pdf
+
+
+
+3-5
+8.1: Metric Spaces - Jiří Lebl (Oklahoma State University)
+https://math.libretexts.org/Bookshelves/Analysis/Introduction_to_Real_Analysis_(Lebl)/08:_Metric_Spaces/8.01:_Metric_Spaces
+
+
+
+3-6
+Metric and Topological Spaces - Definition and examples of metric spaces
+http://www-groups.mcs.st-andrews.ac.uk/~john/MT4522/Lectures/L5.html
+
+
+
+3-7
+Definition of a metric
+https://math.stackexchange.com/questions/319759/definition-of-a-metric
+
+
+
+3-8
+Introduction to Real Analysis - Fall 2014 Lecture Notes - Vern I. Paulsen
+https://www.math.uh.edu/~vern/4331lec.pdf
+
+
+
+3-9
+Metric Spaces
+https://math.okstate.edu/people/lebl/uw521-f11/mspaces.pdf
+
+
+
+3-10
+Metric Spaces
+https://www.geneseo.edu/~aguilar/public/notes/Real-Analysis-HTML/ch9-metric-spaces.html
+
+
+
+3-11
+Is it helpful to teach about metric spaces in a first real analysis course?
+https://www.quora.com/Is-it-helpful-to-teach-about-metric-spaces-in-a-first-real-analysis-course
+
+Not really.
+
+Metric spaces is more of a specific set up for things like measure theory, and acts, in my opinion at least, as a framework for defining points and distances in sets, as well as the sets themselves.
+
+All results from Real Analysis can be formulated from the perspective of metric spaces, but to do so in a first course would introduce a student to too much unnecessary machinery at once, disguising the motivation behind analysis.
+
+The definitions in real analysis would barely change. In fact, they would be abstracted away from the reals into any set on which there exists a metric. To some of the uninitiated this sounds like a dream; learn a general method for analysis in any measurable set. But as someone who has taken both courses I can safely say you need to learn to walk before you can run.
+
+Once the framework of metric spaces is introduced AFTER all the real analysis, it is much more straightforward for a student to take it all in and generalise to measurable sets- primarily because it's effectively a second pass of all the information from real analysis, just abstracting those basic notions to any measurable set you like.
+
+
