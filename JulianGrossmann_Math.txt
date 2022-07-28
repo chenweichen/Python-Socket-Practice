@@ -163,3 +163,32 @@ https://www.jirka.org/ra/changes2.html
 I started numbering things with version numbers starting at 4.0 for volume I, and version 1.0 for volume II. The first number is the major number and it really means "edition" and will be raised when substantial changes are made. The second number is raised for corrections only.
 
 
+
+5.
+Real Analysis 
+https://www.geneseo.edu/~aguilar/
+
+
+An Introduction to Real Analysis by Cesar Aguilar
+https://www.geneseo.edu/~aguilar/public/assets/courses/324/real-analysis-cesar-aguilar.pdf
+
+
+Real Analysis I MATH 324 : Spring 2022
+https://www.geneseo.edu/~aguilar/courses/math/324
+
+
+Real Analysis II MATH 325 : Spring 2022
+https://www.geneseo.edu/~aguilar/courses/math/325
+
+
+An Introduction to Real Analysis
+https://www.geneseo.edu/~aguilar/public/notes/Real-Analysis-HTML/index.html
+
+
+Calculus II
+https://www.geneseo.edu/~aguilar/public/notes/Calculus-2-HTML/index.html
+
+3. Sequences and Series
+https://www.geneseo.edu/~aguilar/public/notes/Calculus-2-HTML/ch3-sequences-and-series.html
+
+
