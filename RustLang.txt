@@ -228,3 +228,35 @@ https://code.visualstudio.com/docs/languages/rust
 rust-analyzer 
 
 
+
+24.
+Rust on ESP 
+
+Rust on the ESP and how to get started
+https://dentrassi.de/2019/06/16/rust-on-the-esp-and-how-to-get-started/
+
+
+Rust on ESP32 - Sylvain Kerkour
+https://kerkour.com/rust-on-esp32
+
+
+Libraries, crates and examples for using Rust on Espressif SoC's
+https://github.com/esp-rs
+
+
+
+25.
+Rust on Arduino 
+
+如何在 Arduino Uno 中运行 Rust：让你的 LED 灯闪起来
+https://n3xtchen.github.io/n3xtchen/rust/2020/08/22/rust-arduino-our-first-blink
+
+
+Git 修改远端仓库地址
+https://n3xtchen.github.io/n3xtchen/git/2017/06/05/git-update-remote
+
+
+Can You Program Arduino with Rust?
+https://chipwired.com/programming-arduino-with-rust/
+
+
