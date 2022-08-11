@@ -1,0 +1,60 @@
+# MQTT
+
+## No.:
+## Title:
+## https links: 
+
+
+1.
+MQTT教學（一）：認識MQTT
+https://swf.com.tw/?p=1002
+
+
+ESP32-CAM開發板（三）：拍照並上傳影像到網站伺服器
+https://swf.com.tw/?p=1753
+
+
+
+2.
+Day19 - 物聯網基礎傳輸協議 - MQTT
+https://ithelp.ithome.com.tw/articles/10224407
+
+
+Day11 - Python 如何處理 JSON
+https://ithelp.ithome.com.tw/articles/10220160
+
+
+Day29 - python 連接 InfluxDB
+https://ithelp.ithome.com.tw/articles/10227760
+
+
+Day26 - MQTTlens
+https://ithelp.ithome.com.tw/articles/10227124
+
+
+An asynchronous MQTT client library for julia
+https://github.com/rweilbacher/MQTT.jl
+
+
+python MQTT Mosquitto
+https://ithelp.ithome.com.tw/questions/10199871
+
+
+Julia interface for InfluxDB
+https://github.com/staticfloat/InfluxDB.jl
+
+
+Use InfluxDB client libraries
+https://docs.influxdata.com/influxdb/v2.3/api-guide/client-libraries/
+
+
+InfluxDB wiki 
+https://zh.wikipedia.org/zh-tw/InfluxDB
+
+作為時序型資料庫，InfluxDB不提供用戶直接刪除或更新數據的途徑
+
+
+Python 使用 Paho 函式庫發布、訂閱 MQTT 訊息教學與範例
+https://officeguide.cc/python-paho-library-mqtt-client-tutorial-examples/
+
+
