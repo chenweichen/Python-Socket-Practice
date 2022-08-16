@@ -192,3 +192,30 @@ https://www.geneseo.edu/~aguilar/public/notes/Calculus-2-HTML/index.html
 https://www.geneseo.edu/~aguilar/public/notes/Calculus-2-HTML/ch3-sequences-and-series.html
 
 
+
+6.
+Calculus with Julia notes
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/
+
+https://github.com/jverzani/CalculusWithJuliaNotes.jl
+
+https://github.com/jverzani/CalculusWithJulia.jl
+
+
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/limits/limits.html
+
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/derivatives/symbolic_derivatives.html
+
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/derivatives/optimization.html
+
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/derivatives/newtons_method.html
+
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/derivatives/lhospitals_rule.html
+
+https://jverzani.github.io/CalculusWithJuliaNotes.jl/derivatives/taylor_series_polynomials.html
+
+
+Julia in the classroom
+https://julialang.org/learning/classes/
+
+
