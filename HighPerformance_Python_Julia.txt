@@ -984,6 +984,150 @@ Priority queues, heaps, and back to sorting
 
 
 
+29.
+Julia v1.8 @assume_effects
+Quick intro to the new effect analysis of Julia compiler
+https://aviatesk.github.io/posts/effects-analysis/index.html
+
+
+Background:
+
+Julia compiler is powered by abstract interpretation, which is powered by constant propagation
+constant propagation == inject constant information into abstract interpretation
+But constant prop can be slow!
+
+Idea: replace abstract interpretation with const prop actual execution (i.e. concrete evaluation) instead!
+The effect analysis is an technique to check when it is valid to perform concrete evaluation
+
+Results:
+huge compiler performance improvements,
+great runtime performance improvement,
+and it also gives you a more fine grained control for compiler behaviors!
+
+
+https://docs.julialang.org/en/v1.9-dev/base/base/#Base.@assume_effects
+
+
+R: Constant Propagation
+https://cran.r-project.org/web/packages/rco/vignettes/opt-constant-propagation.html
+
+For example, consider the following code:
+x <- 14
+y <- 7 - x / 2
+z <- y * (28 / x + 2) - x
+
+Here, x is assigned a constant, and thus, can be propagated (three times). Propagating yields:
+x <- 14
+y <- 7 - 14 / 2
+z <- y * (28 / 14 + 2) - 14
+
+Constant propagation enables the code to assign static values, which is faster than looking up and copying the value of a variable, 
+and also saves time by eliminating assigning a value to a variable that is itself subsequently used only to propagate that value throughout the code. 
+In some cases, copy propagation itself may not provide direct optimizations, but simply facilitates other transformations, 
+such as [constant folding], code motion, and [dead code elimination].
+
+https://cran.r-project.org/web/packages/rco/vignettes/opt-constant-folding.html
+
+https://cran.r-project.org/web/packages/rco/vignettes/opt-dead-code.html
+
+
+Constant Propagation
+https://homes.cs.washington.edu/~bodik/ucb/cs264/lectures/4-chaotic-notes.pdf
+
+
+Constant Propagation in Compiler Design
+https://www.geeksforgeeks.org/constant-propagation-in-complier-design/
+
+Constant Propagation is one of the local code optimization technique  in Compiler Design. 
+It can be defined as the process of replacing the constant value of variables in the expression. 
+In simpler words, we can say that if  some value is assigned a known constant, than we can simply replace the that value by constant. 
+Constants assigned to a variable can be propagated through the flow graph and can be replaced when the variable is used. 
+
+Constant propagation is executed using reaching definition analysis results in compilers, 
+which means that if reaching definition of all variables have same assignment which assigns a same constant to the variable, 
+then the variable has a constant value and can be substituted with the constant. 
+
+Suppose we are using pi variable and assign it value of 22/7
+
+
+pi = 22/7 = 3.14
+
+
+In the above code the compiler has to first perform division operation, 
+which is an expensive operation and then assign the computed result 3.14 to the variable pi. 
+Now if anytime we have to use this constant value of pi, then the compiler again has to look – up for the value and again 
+perform division operation and then assign it to pi and then use it. 
+This is not a good idea when we can directly assign the value 3.14 to pi variable, thus reducing the time needed for code to run.  
+
+Also, Constant propagation reduces the number of cases where values are directly copied from one location or variable to another, in 
+order to simply allocate their value to another variable. For an example :
+Consider the following pseudocode :  
+
+
+a = 30
+b = 20 - a /2
+c = b * ( 30 / a + 2 ) -  a
+
+
+We can see that in the first expression value of a have assigned a constant value that is 30. 
+Now, when the compiler comes to execute the second expression it encounters a, 
+so it goes up to the first expression to look for the value of a and then assign the value of 30 to a again, 
+and then it executes the second expression. Now it comes to the third expression and encounters b and a again, 
+and then it needs to evaluate the first  and second expression again in order to compute the value of c. 
+Thus, a needs to be propagated 3 times This procedure is very time consuming.
+
+We can instead , rewrite the same code as :
+
+
+a = 30
+b = 20 - 30/2
+c = b * ( 30 / 30 + 2) - 30
+
+
+This updated code is faster as compared to the previous code as the compiler does not need to again and again go back to the previous expressions 
+looking up and copying the value of a variable in order to compute the current expressions. 
+This saves a lot of time and thus, reducing time complexity and perform operations more efficiently.   
+
+Note that this constant propagation technique behavior depends on compiler 
+like few compilers perform constant propagation operations within the basic blocks;  
+while a few compilers perform constant propagation operations in more complex control flow. 
+
+
+About @assume_effects
+https://discourse.julialang.org/t/about-assume-effects/84668/2
+
+
+Take purity modeling seriously #43852
+https://github.com/JuliaLang/julia/pull/43852
+
+
+reland "effects: add effects analysis for array construction" (#46282)
+https://github.com/JuliaLang/julia/commit/3abe00a395830243b4669903ba6a85317e6f538f
+
+
+
+30.
+separate codegen/LLVM from julia runtime #41936
+https://github.com/JuliaLang/julia/pull/41936
+
+This is a follow-up to #39129. 
+The current state of the PR is that by default, everything works as normal, 
+except during the build we generate both libjulia-internal (which does not link against LLVM) and libjulia-codegen (which does). 
+The loader attempts to load libjulia-codegen after libjulia-internal. 
+If that fails, it populates the codegen entry points with fallbacks in libjulia-internal that do nothing. 
+That means you can simply delete libjulia-codegen, start with --compile=no, 
+and enjoy a compiler-free julia runtime (assuming you don't actually need the compiler of course 😄 ).
+
+This probably still needs a bunch of cleanup, and it also tends to segfault with --compile=no, which I assume can be fixed.
+
+All in all, the loader framework we have is quite a nice way to separate the system into multiple optional components, 
+and I foresee doing more of that. 
+The parser and front-end would be another logical component to separate (and then ultimately replace with a new implementation written in julia and separately compiled!). 
+It would be nice if we could streamline adding plugins a bit --- naturally, 
+we thought the loader would only ever load one thing, so a few too many places need to be modified to add another.
+
+
+
 /*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/*#-/
 
 [Python part]
